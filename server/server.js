@@ -9,7 +9,7 @@ const app = express();
 const mongoURI = "mongodb+srv://hshaw:trial1337@soloproject.k5xsniw.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoURI)
 
-app.use('/client', express.static(path.resolve(__dirname, './client')))
+app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../index.html'));
