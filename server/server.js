@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
+const songController = require('./controllers/songController')
+
 const PORT = 3000;
 
 const app = express();
@@ -24,7 +26,7 @@ app.get('/songs', songController.getAllSongs, (req, res) => {
 
 //when a user clicks the button to add songs, this route will run and add the song to the database. Not sure what I need to add so the page auto updates when this occurs
 app.post('/', songController.addSong, (req, res) => {
-    res.send.status(201)
+    res.status(201).send(res.locals.song)
 });
 
 app.use('*', (req, res) => {
