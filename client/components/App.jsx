@@ -9,7 +9,7 @@ class App extends Component {
 render() {
     return (
         <div>
-            <h1>All Mixed Up</h1>
+            <h1>Is this rendering?</h1>
         </div>
         );
     }
@@ -18,4 +18,4 @@ render() {
 
 
 
-render(<App />, document.querySelector("#root"));
+export default App;
