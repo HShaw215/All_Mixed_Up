@@ -11,10 +11,18 @@ mongoose.connect(mongoURI)
 
 app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
+//route to serve tehe index html when the page is loaded
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
 });
 
+//this will be the route for when the components on the page mount. A request will come in for the container to populate with songs from database
+app.get('/songs', songController.getAllSongs, (req, res) => {
+    console.log('song added to playlist')
+    res.status(200).send( {songs: res.locals.songs} )
+})
+
+//when a user clicks the button to add songs, this route will run and add the song to the database. Not sure what I need to add so the page auto updates when this occurs
 app.post('/', songController.addSong, (req, res) => {
     res.send.status(201)
 });
