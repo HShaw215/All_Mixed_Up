@@ -12,9 +12,21 @@ mongoose.connect(mongoURI)
 app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../index.html'));
+    res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
 });
 
+app.post('/', songController.addSong, (req, res) => {
+    res.send.status(201)
+});
+
+app.use('*', (req, res) => {
+    res.status(404).send('Not Found')
+});
+
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.status(500).send({ error : err});
+})
 
 app.listen(PORT, ()=>{ console.log(`Listening on port ${PORT}...`); });
 module.exports = app;

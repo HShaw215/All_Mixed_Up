@@ -1,0 +1,54 @@
+
+@import 'colors';
+
+#root {
+    margin: 0 auto;
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: linear-gradient(to left, #1d976c, #93f9b9);
+}
+
+.primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.entryBox {
+    margin-top: 3em;
+}
+
+form {
+    display: inline-flex;
+    gap: 3em;
+}
+
+input {
+    margin-left: 1em;
+}
+
+.setBox {
+    margin-top: 2em;
+}
+
+#add {
+    background-color: $addButton;
+    border-radius: 3px;
+    border-width: 1.5px;
+}
+
+#vibes {
+    background-color: lighten($addButton, 5%);
+    margin-left: .5em;
+    border-radius: 3px;
+    border-width: 1.5px;
+}
+
+.container {
+    border: 1px solid black;
+    margin-top: 2em;
+}
+
