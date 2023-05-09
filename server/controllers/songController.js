@@ -28,30 +28,39 @@ async getAllSongs(req, res, next) {
 async addSong(req, res, next) {
     console.log('songController addSong is running');
     console.log(req.body)
-    try{
-    res.locals.song = Song.create(req.body)
-    next();
-    }
-    catch{
-        return next({
-            err:{err: 'Invalid song entry'}
-        })
-    }  
-    // const { song, key, length } = req.body;
+    // try{
+    // res.locals.song = Song.create(req.body)
+    // next();
+    // }
+    // catch{
+    //     return next({
+    //         err:{err: 'Invalid song entry'}
+    //     })
+    // }  
+    const { name, key, length } = req.body;
     // console.log(req.body)
 //    res.locals.song = song;
-    // Song.create({song: song, key: key, length: length}, (err, song) => {
-    //     if (err) next(err);
-    //     console.log(song)
-        // return next();
-    // })
-    // try {
-    //     res.locals.song = await Song.create(req.body);
-    //     return next();
-    // }
-    // catch {
-    //     err: ({err : "Please enter all details"})
-    // }
+//     Song.create({name: song, key: key, length: length}, (err, song) => {
+//         if (err) next(err);
+//         console.log(song)
+//         return next();
+//     })
+//     try {
+//         res.locals.song = await Song.create(req.body);
+//         return next();
+//     }
+//     catch {
+//         err: ({err : "Please enter all details"})
+//     }
+    try {
+        res.locals.song = await Song.create({name: name, key: key, length: length})
+        return next();
+    }
+    catch {
+        return next({
+            err: {err: "Invalid song entry"}
+        });
+    }
 },
 
 };

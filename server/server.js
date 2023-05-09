@@ -20,13 +20,14 @@ app.get('/', (req, res) => {
 
 //this will be the route for when the components on the page mount. A request will come in for the container to populate with songs from database
 app.get('/songs', songController.getAllSongs, (req, res) => {
-    console.log('song added to playlist')
+    console.log('songs recieved from database')
     res.status(200).send( {songs: res.locals.songs} )
 })
 
 //when a user clicks the button to add songs, this route will run and add the song to the database. Not sure what I need to add so the page auto updates when this occurs
 app.post('/', songController.addSong, (req, res) => {
-    res.status(201).send(res.locals.song)
+    console.log('song added to playlist');
+    res.status(201).send(res.locals.song);
 });
 
 app.use('*', (req, res) => {
