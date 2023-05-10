@@ -47,87 +47,133 @@ input {
     border-width: 1.5px;
 }
 
+.songName{
+    
+}   
+
+.names {
+    font-weight: bold;
+}
+
+.songKey {
+
+}
+
+.keys {
+    font-weight: bold;
+}
+
+.songLength {
+
+}
+
+.lengths {
+    font-weight: bold;
+}
+
 .container {
     border: 1px solid black;
     margin-top: 2em;
-    flex-direction: row;
-    min-width: 6em;
-    max-width: 80vh
+    display: inline-flex;
+    min-width: 72em;
+    max-width: 72em;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
 [class="1A"], [class="1B"] {
     background-color: rgb(5, 196, 148);
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="2A"], [class="2B"] {
     background-color: lime;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="3A"], [class="3B"] {
     background-color: rgb(251, 255, 0);
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="4A"], [class="4B"] {
     background-color: orange;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="5A"], [class="5B"] {
     background-color: salmon;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    text-align: center;
 }
 
 [class="6A"], [class="6B"] {
-    background-color: ;
+    background-color: palevioletred;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="7A"], [class="7B"] {
     background-color: plum;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
-
-
 
 [class="8A"], [class="8B"] {
     background-color: violet;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    text-align: center;
 }
 
 [class="9A"], [class="9B"] {
     background-color: rgb(159, 4, 159);
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="10A"], [class="10B"] {
     background-color: blueviolet;
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="11A"], [class="11B"] {
     background-color: rgb(220, 220, 244);
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 [class="12A"], [class="12B"] {
     background-color: rgb(6, 234, 234);
     border: 1px solid black;
-    min-width: 3em;
+    min-width: 18em;
+    max-width: 18em;
+    justify-content: center;
 }
 
 
