@@ -74,11 +74,11 @@ input {
 .container {
     border: 1px solid black;
     margin-top: 2em;
-    display: inline-flex;
-    min-width: 72em;
-    max-width: 72em;
-    overflow-x: hidden;
-    overflow-wrap: normal;
+    display: flex;
+    min-width: 72.5em;
+    max-width: 72.5em;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
@@ -87,7 +87,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="2A"], [class="2B"] {
@@ -95,7 +95,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="3A"], [class="3B"] {
@@ -103,7 +103,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="4A"], [class="4B"] {
@@ -111,7 +111,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="5A"], [class="5B"] {
@@ -127,7 +127,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="7A"], [class="7B"] {
@@ -135,7 +135,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="8A"], [class="8B"] {
@@ -151,7 +151,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="10A"], [class="10B"] {
@@ -159,7 +159,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="11A"], [class="11B"] {
@@ -167,7 +167,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 [class="12A"], [class="12B"] {
@@ -175,7 +175,7 @@ input {
     border: 1px solid black;
     min-width: 18em;
     max-width: 18em;
-    justify-content: center;
+    text-align: center;
 }
 
 
