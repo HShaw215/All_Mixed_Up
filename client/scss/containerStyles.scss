@@ -77,6 +77,8 @@ input {
     display: inline-flex;
     min-width: 72em;
     max-width: 72em;
+    overflow-x: hidden;
+    overflow-wrap: normal;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
