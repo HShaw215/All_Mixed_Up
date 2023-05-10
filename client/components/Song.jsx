@@ -6,7 +6,7 @@ import '../scss/containerStyles.scss';
 
 function Song() {
     return (
-        <div>
+        <div class='songDisplay'>
             <p>Name: {this.props.song.name}</p>
             <p>Key: {this.props.song.key}</p>
             <p>Length: {this.props.length}</p>
