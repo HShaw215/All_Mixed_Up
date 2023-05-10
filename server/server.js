@@ -8,6 +8,8 @@ const PORT = 3000;
 
 const app = express();
 
+app.use(express.json());
+
 const mongoURI = "mongodb+srv://hshaw:trial1337@soloproject.k5xsniw.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoURI)
 
