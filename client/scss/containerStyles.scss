@@ -50,5 +50,86 @@ input {
 .container {
     border: 1px solid black;
     margin-top: 2em;
+    flex-direction: row;
+    min-width: 6em;
+    max-width: 80vh
 }
+
+// This section is tricky because we absolutely have to have the class names be numbers and css hates that
+[class="1A"], [class="1B"] {
+    background-color: rgb(5, 196, 148);
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="2A"], [class="2B"] {
+    background-color: lime;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="3A"], [class="3B"] {
+    background-color: yellow;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="4A"], [class="4B"] {
+    background-color: orange;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="5A"], [class="5B"] {
+    background-color: salmon;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="6A"], [class="6B"] {
+    background-color: ;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="7A"], [class="7B"] {
+    background-color: plum;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+
+
+[class="8A"], [class="8B"] {
+    background-color: violet;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="9A"], [class="9B"] {
+    background-color: rgb(159, 4, 159);
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="10A"], [class="10B"] {
+    background-color: blueviolet;
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="11A"], [class="11B"] {
+    background-color: rgb(220, 220, 244);
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+[class="12A"], [class="12B"] {
+    background-color: rgb(6, 234, 234);
+    border: 1px solid black;
+    min-width: 3em;
+}
+
+
+
 
