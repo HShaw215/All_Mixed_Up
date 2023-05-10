@@ -30,10 +30,15 @@ module.exports = {
         ]
     },
     devServer: {
+        static: {
+            publicPath: '/',
+            directory: path.join(__dirname)
+        },
+        compress: true,
         proxy: {
-            '/test': {
-                target: 'http://localhost:3000/',
-            },
+            '/': 'http://localhost:3000/',
+            '/songs': 'http://localhost:3000/',
+            '/build': 'http://localhost:3000/build/bundle.js'
         },
     },
     plugins: [
