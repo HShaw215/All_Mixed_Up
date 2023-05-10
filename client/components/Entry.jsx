@@ -23,7 +23,8 @@ function Entry() {
         );
     }
 
-
+//need to pull info from all text boxes when then add button is pressed and put into a request body. That request body then has to be sent
+//as a post request to the / route
 
 
 export default Entry;

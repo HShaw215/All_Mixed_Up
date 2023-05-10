@@ -27,7 +27,7 @@ function Container() {
     //   }
     //need to create a loop to check how many items exist in the database, and create an element for each one of those songs
 
-    // const songsToDisplay = [];
+    const songsToDisplay = [];
     for (let i = 0; i < setList.length; i++){
         songsToDisplay.push(<Song key={i} song={setList[i]}/>)
     }

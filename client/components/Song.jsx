@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 
 
-function Song() {
+function Song(props) {
     return (
         <div class='songDisplay'>
-            <p>Name: {this.props.song.name}</p>
-            <p>Key: {this.props.song.key}</p>
-            <p>Length: {this.props.length}</p>
+            <p>Name: {props.song.name}</p>
+            <p>Key: {props.song.key}</p>
+            <p>Length: {props.song.length}</p>
         </div>
     );
 }

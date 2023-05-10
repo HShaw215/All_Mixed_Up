@@ -22,7 +22,7 @@ function App() {
             <Set />
             </div>
             <div class='containerBox'>
-            {/* <Container /> */}
+            <Container />
             </div>
         </div>
         );
