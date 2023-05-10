@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
+// import React, { Component } from 'react';
+// import { render } from "react-dom";
+import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 import Song from './Song.jsx';
 
-class Container extends Component {
-    constructor(props){
-        super(props);
-    }
+function Container() {
+    const [songsToDisplay] = useState([])
     // //once the container element loads
     // componentDidMount() {
     //     //send a get request to the songs endpoint to get all the songs in the database
@@ -16,8 +15,7 @@ class Container extends Component {
     //   }
     //need to create a loop to check how many items exist in the database, and create an element for each one of those songs
 
-render() {
-    const songsToDisplay = [];
+    // const songsToDisplay = [];
     for (let i = 0; i < this.state.setList.length; i++){
         songsToDisplay.push(<Song key={i} song = {this.props.setList[i]}/>)
     }
@@ -29,7 +27,7 @@ render() {
         </div>
         );
     }
-}
+
 
 
 export default Container;

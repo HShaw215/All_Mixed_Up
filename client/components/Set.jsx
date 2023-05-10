@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
+// import React, { Component } from 'react';
+// import { render } from "react-dom";
+import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss'
 
-class Set extends Component {
-    constructor(props){
-        super(props)
-    }
-
-render() {
+function Set () {
+    
     return (
         <div>
            <form>
@@ -19,6 +16,5 @@ render() {
         </div>
         );
     }
-}
 
 export default Set;

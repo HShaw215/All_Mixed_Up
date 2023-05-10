@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { render } from "react-dom";
+import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss'
 
-class Entry extends Component {
-    constructor(props){
-        super(props)
-    }
+function Entry() {
 
-render() {
     return (
         <div>
            <form>
@@ -25,7 +22,6 @@ render() {
         </div>
         );
     }
-}
 
 
 
