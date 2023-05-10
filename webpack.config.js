@@ -37,7 +37,7 @@ module.exports = {
         compress: true,
         proxy: {
             '/': 'http://localhost:3000/',
-            '/songs': 'http://localhost:3000/',
+            '/songs': 'http://localhost:3000/songs',
             '/build': 'http://localhost:3000/build/bundle.js'
         },
     },

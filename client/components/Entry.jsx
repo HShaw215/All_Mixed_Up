@@ -28,7 +28,7 @@ function Entry() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({name, key, length})
-        })
+        });
     }
 
     return (
@@ -43,7 +43,7 @@ function Entry() {
             <label>Enter Length of Song:
                 <input id='lengthInput' type="text" placeholder="3.2" onChange = {e => setLength(e.target.value)}></input>
             </label>
-            <button id='add' onClick={handleSubmit(name, key, length)}>Add To Playlist</button>
+            <button id='add' type="submit" onClick={handleSubmit(name, key, length)}>Add To Playlist</button>
            </form>
         </div>
         );

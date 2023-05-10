@@ -52,6 +52,13 @@ async addSong(req, res, next) {
 //     catch {
 //         err: ({err : "Please enter all details"})
 //     }
+
+//songs are double adding on submit beacuse of the refresh so we need to check if the song is already in the database
+//for some reason submit is running constantly even if I dont hit submit
+    // if (Song.find({"name": name, "key": key, "length": length})) return next({
+    //     err: {err: "Song already in playlist"}
+    // })
+    // else{
     try {
         res.locals.song = await Song.create({name: name, key: key, length: length})
         return next();
@@ -61,7 +68,7 @@ async addSong(req, res, next) {
             err: {err: "Invalid song entry"}
         });
     }
-},
+    },
 
 };
 
