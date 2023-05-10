@@ -9,7 +9,7 @@ function Set () {
         <div>
            <form>
             <label>How Long is Your Set?
-                <input id='setTimer' type="text"></input>
+                <input id='setTimer' type="text" placeholder="2"></input>
                 <button id='vibes'>Vibes</button>
             </label>
            </form>
