@@ -41,7 +41,7 @@ function Entry() {
                 <input id='keyInput' type="text" placeholder="1A" onChange = {e => setKey(e.target.value)}></input>
             </label>
             <label>Enter Length of Song:
-                <input id='lengthInput' type="text" placeholder="3.2" onChange = {e => setLength(e.target.value)}></input>
+                <input id='lengthInput' type="text" placeholder="3" onChange = {e => setLength(e.target.value)}></input>
             </label>
             <button id='add' type="submit" onClick={handleSubmit(name, key, length)}>Add To Playlist</button>
            </form>

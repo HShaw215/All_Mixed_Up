@@ -70,6 +70,22 @@ async addSong(req, res, next) {
     }
     },
 
+
+
+// async deleteSong(req, res, next) {
+//     console.log('deleteSong controller running')
+//     console.log(req.body.name)
+//     try {
+//         res.locals.deleted = await Song.findOneAndDelete({name: req.body.name});
+//         return next();
+//     }
+//     catch {
+//         return next({
+//             err: {err: "Could not find song to delete"}
+//         });
+//     }
+// },
+
 };
 
 module.exports = songController;

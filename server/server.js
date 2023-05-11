@@ -32,6 +32,12 @@ app.post('/', songController.addSong, (req, res) => {
     res.status(201).send(res.locals.song);
 });
 
+// //route to delete a song when clicked
+// app.delete('/', songController.deleteSong, (req, res) => {
+//     console.log('song deleted from playlist');
+//     res.status(200).send(res.locals.deleted)
+// })
+
 app.use('*', (req, res) => {
     res.status(404).send('Not Found')
 });

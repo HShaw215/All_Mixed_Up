@@ -16,6 +16,19 @@ function Container() {
            .then(setList => setSetList(setList))
            .catch((err) => console.log(err))
        }, []);
+
+
+    // const handleDelete = (name) => {
+    //     console.log(name)
+    //     fetch('/', {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify({name})
+    //     })
+     
+    // }
      //   console.log(setList)
         //need to create a loop to check how many items exist in the database, and create an element for each one of those songs
     // //once the container element loads
