@@ -8,16 +8,16 @@ function Set () {
 
     const [timer, setTimer] = useState('');
 
-    // const handleSubmit = (timer) => {
-    //     // console.log(timer)
-    //         fetch('/time', {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json"
-    //             },
-    //             body: JSON.stringify({timer})
-    //     });
-    // }
+    const handleSubmit = (timer) => {
+        // console.log(timer)
+            fetch('/time', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({timer})
+        });
+    }
 
     return (
         <div>
