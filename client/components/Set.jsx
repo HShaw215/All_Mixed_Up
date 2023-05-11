@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 // import Container from './Container.jsx';
 
-function Set () {
+function Set(updateState) {
 
     const [timer, setTimer] = useState('');
 
@@ -16,7 +16,10 @@ function Set () {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({timer})
-        });
+        })
+        .then(response => response.json())
+        .then(setList =>updateState(setList))
+        .catch((err) => console.log(err))
     }
 
     return (
@@ -24,7 +27,7 @@ function Set () {
            <form>
             <label>How Long is Your Set?
                 <input id='setTimer' type="text" placeholder="2" onChange = {e => setTimer(e.target.value)}></input>
-                <button id='vibes' onClick={handleSubmit(timer)}>Vibes</button>
+                <button id='vibes' onClick={() => {handleSubmit(timer)}}>Vibes</button>
             </label>
            </form>
         </div>
