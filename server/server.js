@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 const songController = require('./controllers/songController')
+const setController = require('./controllers/setController')
 
 const PORT = 3000;
 
@@ -31,6 +32,12 @@ app.post('/', songController.addSong, (req, res) => {
     console.log('song added to playlist');
     res.status(201).send(res.locals.song);
 });
+
+//route for sending set time filter
+app.post('/time', setController.createPlaylist, (req, res) => {
+    console.log('playlist generated');
+    res.status(200).send(res.locals.playlist);
+})
 
 // //route to delete a song when clicked
 // app.delete('/', songController.deleteSong, (req, res) => {

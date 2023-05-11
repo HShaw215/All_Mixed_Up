@@ -5,12 +5,25 @@ import '../scss/containerStyles.scss'
 
 function Set () {
 
+    const [timer, setTimer] = useState('');
+
+    const handleSubmit = (timer) => {
+        // console.log(timer)
+            fetch('/time', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({timer})
+        });
+    }
+
     return (
         <div>
            <form>
             <label>How Long is Your Set?
-                <input id='setTimer' type="text" placeholder="2"></input>
-                <button id='vibes'>Vibes</button>
+                <input id='setTimer' type="text" placeholder="2" onChange = {e => setTimer(e.target.value)}></input>
+                <button id='vibes' onClick={handleSubmit(timer)}>Vibes</button>
             </label>
            </form>
         </div>
