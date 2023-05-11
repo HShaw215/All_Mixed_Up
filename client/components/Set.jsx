@@ -8,32 +8,31 @@ function Set() {
 
     const [timer, setTimer] = useState('');
 
-    const handleSubmit = (timer) => {
-        // console.log(timer)
-            fetch('/time', {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({timer})
-        })
+    // const handleSubmit = (timer) => {
+    //     // console.log(timer)
+    //         fetch('/time', {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({timer})
+    //     })
     //     .then(response => response.json())
     //     .then(setList =>updateState(setList))
     //     .catch((err) => console.log(err))
     // }
-
+    // onClick={ () => handleSubmit(timer)}
     return (
         <div>
            <form>
             <label>How Long is Your Set?
                 <input id='setTimer' type="text" placeholder="2" onChange = {e => setTimer(e.target.value)}></input>
-                <button id='vibes' onClick={handleSubmit(timer)}>Vibes</button>
+                <button id='vibes'>Vibes</button>
             </label>
            </form>
         </div>
         );
     }
-}
 
 export default Set;
 
