@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 // import Container from './Container.jsx';
 
-function Set(updateState) {
+function Set({updateState}) {
 
     const [timer, setTimer] = useState('');
 

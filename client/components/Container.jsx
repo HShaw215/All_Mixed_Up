@@ -4,14 +4,16 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 import Song from './Song.jsx';
 
-function Container() {
+function Container({setList, updateState}) {
+// function Container()
     // const [setList, setSetList] = useState([])
-
+    // const [songsToDisplay, setSongsToDisplay] = useState([])
+    console.log("test", setList)
     // // //how do we replace component did mount with useEffect for hooks?
 
     // //only have pull all songs when set list is an empty array
     // if (setList.length === 0){
-    // //  useEffect(() => {
+    //  useEffect(() => {
     //      console.log('App mounted')
     //      //send a get request to the songs endpoint to get all the songs in the database
     //      fetch('/songs')
@@ -20,6 +22,18 @@ function Container() {
     //        .catch((err) => console.log(err))
     // //    }, []);
     // };
+
+        // //only have pull all songs when set list is an empty array
+        // if (setList.setList.length === 0){
+        //     //  useEffect(() => {
+        //          console.log('App mounted')
+        //          //send a get request to the songs endpoint to get all the songs in the database
+        //          fetch('/songs')
+        //            .then(response => response.json())
+        //            .then(setList => setSetList(setList))
+        //            .catch((err) => console.log(err))
+        //     //    }, []);
+        //     
 
        //I think if I move the onclick functionality to here, I can simply have it reassign the setList to be the filtered data
         //the hardest part is getting the button click to still work in the container
@@ -59,11 +73,14 @@ function Container() {
     //       .then(setList => this.setState({setList}));
     //   }
     //need to create a loop to check how many items exist in the database, and create an element for each one of those songs
-
+// useEffect(() => {
     const songsToDisplay = [];
     for (let i = 0; i < setList.length; i++){
+        console.log(setList[i])
+        // setSongsToDisplay(<Song key={i} song={setList[i]}/>)
         songsToDisplay.push(<Song key={i} song={setList[i]}/>)
     }
+// });
     // console.log(this.state.setList.songs)   //give an array of each song object, need to make a new div for each song
     // const set = this.state.setList.songs.forEach(song => <div className="songBox" key={song.key}>{song}</div>);
     return (

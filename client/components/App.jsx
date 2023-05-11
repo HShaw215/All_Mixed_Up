@@ -15,17 +15,33 @@ function App() {
 
     // //how do we replace component did mount with useEffect for hooks?
 
-    // //only have pull all songs when set list is an empty array
-    if (setList.length === 0){
-    //  useEffect(() => {
-         console.log('App mounted')
-         //send a get request to the songs endpoint to get all the songs in the database
-         fetch('/songs')
-           .then(response => response.json())
-           .then(setList => setSetList(setList))
-           .catch((err) => console.log(err))
-    //    }, []);
-    };
+    // // //only have pull all songs when set list is an empty array
+    // if (setList.length === 0){
+    // //  useEffect(() => {
+    //      console.log('App mounted')
+    //      //send a get request to the songs endpoint to get all the songs in the database
+    //      fetch('/songs')
+    //        .then(response => response.json())
+    //        .then(setList => setSetList(setList))
+    //        .catch((err) => console.log(err))
+    // //    }, []);
+    // }
+
+      //only have pull all songs when set list is an empty array
+        if (setList.length === 0){
+            //  useEffect(() => {
+                 console.log('App mounted')
+                 console.log(setList)
+                 //send a get request to the songs endpoint to get all the songs in the database
+                 fetch('/songs')
+                   .then(response => response.json())
+                   .then(setList => {
+                    console.log('fetched from database', setList)
+                    setSetList(setList)
+                   })
+                   .catch((err) => console.log(err))
+            //    }, []);
+            }
 
     // const handleSubmit = (timer) => {
     //         // console.log(timer)
@@ -52,10 +68,10 @@ function App() {
             <Entry />
             </div>
             <div class='setBox'>
-            <Set updateState = {updateState}/>
+            <Set updateState={updateState}/>
             </div>
             <div class='containerBox'>
-            <Container />
+            <Container setList={setList} updateState={updateState}/>
             </div>
         </div>
         );
