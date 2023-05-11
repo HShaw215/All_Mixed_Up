@@ -17,6 +17,21 @@ function Container() {
            .catch((err) => console.log(err))
        }, []);
 
+       //I think if I move the onclick functionality to here, I can simply have it reassign the setList to be the filtered data
+        //the hardest part is getting the button click to still work in the container
+        const handleSubmit = (timer) => {
+            // console.log(timer)
+                fetch('/time', {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({timer})
+            })
+            .then(response => response.json())
+            .then(setList => setSetList(setList))
+            .catch((err) => console.log(err))
+        };
 
     // const handleDelete = (name) => {
     //     console.log(name)

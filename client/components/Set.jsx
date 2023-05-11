@@ -1,22 +1,23 @@
 // import React, { Component } from 'react';
 // import { render } from "react-dom";
 import React, { useState, useEffect } from 'react';
-import '../scss/containerStyles.scss'
+import '../scss/containerStyles.scss';
+// import Container from './Container.jsx';
 
 function Set () {
 
     const [timer, setTimer] = useState('');
 
-    const handleSubmit = (timer) => {
-        // console.log(timer)
-            fetch('/time', {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({timer})
-        });
-    }
+    // const handleSubmit = (timer) => {
+    //     // console.log(timer)
+    //         fetch('/time', {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             },
+    //             body: JSON.stringify({timer})
+    //     });
+    // }
 
     return (
         <div>
