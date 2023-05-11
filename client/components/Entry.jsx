@@ -21,7 +21,7 @@ function Entry() {
         //  })
     //    })
     const handleSubmit = (name, key, length) => {
-        // console.log(name, key, length)
+        console.log('handle is running')
             fetch('/', {
                 method: "POST",
                 headers: {

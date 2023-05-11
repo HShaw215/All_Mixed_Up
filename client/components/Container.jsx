@@ -8,6 +8,8 @@ function Container() {
     const [setList, setSetList] = useState([])
 
     //how do we replace component did mount with useEffect for hooks?
+
+    //only have pull all songs when set list is an empty array
      useEffect(() => {
          console.log('App mounted')
          //send a get request to the songs endpoint to get all the songs in the database
@@ -19,6 +21,7 @@ function Container() {
 
        //I think if I move the onclick functionality to here, I can simply have it reassign the setList to be the filtered data
         //the hardest part is getting the button click to still work in the container
+       //Could add a true false button where one displays all songs, the other shows filtered playlist
         // const handleSubmit = (timer) => {
         //     // console.log(timer)
         //         fetch('/time', {
