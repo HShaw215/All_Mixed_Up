@@ -4,24 +4,24 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 import Song from './Song.jsx';
 
-function Container({setList, updateState}) {
-// function Container()
-    // const [setList, setSetList] = useState([])
+// function Container({setList, updateState}) {
+async function Container(){
+    const [setList, setSetList] = useState([])
     // const [songsToDisplay, setSongsToDisplay] = useState([])
-    console.log("test", setList)
+    // console.log("test", setList)
     // // //how do we replace component did mount with useEffect for hooks?
 
     // //only have pull all songs when set list is an empty array
-    // if (setList.length === 0){
+    if (setList.length === 0){
     //  useEffect(() => {
-    //      console.log('App mounted')
-    //      //send a get request to the songs endpoint to get all the songs in the database
-    //      fetch('/songs')
-    //        .then(response => response.json())
-    //        .then(setList => setSetList(setList))
-    //        .catch((err) => console.log(err))
-    // //    }, []);
-    // };
+         console.log('App mounted')
+         //send a get request to the songs endpoint to get all the songs in the database
+         await fetch('/songs')
+           .then(response => response.json())
+           .then(setList => setSetList(setList))
+           .catch((err) => console.log(err))
+    //    }, []);
+    };
 
         // //only have pull all songs when set list is an empty array
         // if (setList.setList.length === 0){

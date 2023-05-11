@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 // import Container from './Container.jsx';
 
-function Set({updateState}) {
+function Set({}) {
 
     const [timer, setTimer] = useState('');
 
@@ -17,10 +17,10 @@ function Set({updateState}) {
                 },
                 body: JSON.stringify({timer})
         })
-        .then(response => response.json())
-        .then(setList =>updateState(setList))
-        .catch((err) => console.log(err))
-    }
+    //     .then(response => response.json())
+    //     .then(setList =>updateState(setList))
+    //     .catch((err) => console.log(err))
+    // }
 
     return (
         <div>
@@ -33,6 +33,7 @@ function Set({updateState}) {
         </div>
         );
     }
+}
 
 export default Set;
 
