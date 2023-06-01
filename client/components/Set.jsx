@@ -20,6 +20,10 @@ function Set() {
     //     .then(response => response.json())
     //     .then(setList =>updateState(setList))
     //     .catch((err) => console.log(err))
+
+    //should've done the work around where nothing populates when you load the page until you say how long you want to play for. Then it renders
+        //and updates so you don't have to worry about doing all the state stuff
+
     // }
     // onClick={ () => handleSubmit(timer)}
     return (
