@@ -16,10 +16,15 @@ mongoose.connect(mongoURI)
 
 app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
+if (process.env.NODE_ENV === 'production'){
+    app.use('/', express.static(path.join(__dirname, '../build')))
+}
+else {
 //route to serve tehe index html when the page is loaded
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
-});
+    })
+}
 
 //this will be the route for when the components on the page mount. A request will come in for the container to populate with songs from database
 app.get('/songs', songController.getAllSongs, (req, res) => {
