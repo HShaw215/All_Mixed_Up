@@ -17,6 +17,7 @@
     "author": "Hunter Shaw",
     "license": "ISC",
     "dependencies": {
+        "@reduxjs/toolkit": "^1.9.5",
         "cross-env": "^7.0.3",
         "express": "^4.12.3",
         "html-webpack-plugin": "^5.5.1",
