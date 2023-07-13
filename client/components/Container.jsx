@@ -70,8 +70,8 @@ function Container({setList}) {
         <div class="container">
             {songsToDisplay}
         </div>
-        );
-    }
+    );
+}
 
 
 

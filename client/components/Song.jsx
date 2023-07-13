@@ -12,7 +12,7 @@ function Song(props) {
                 <span class="names">Name: </span>
                 <span class="songName">{props.song.name}</span>
             </p>
-            <p >
+            <p>
                 <span class="keys">Key: </span> 
                 <span class="songKey">{props.song.key}</span>
             </p>
@@ -20,6 +20,9 @@ function Song(props) {
                 <span class="lengths">Length: </span>
                 <span class="songLength">{props.song.length}</span>
             </p>
+            <button class="delete">
+                X
+            </button>
         </div>
     );
 }

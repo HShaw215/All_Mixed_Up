@@ -42,11 +42,12 @@ function App() {
     //         .catch((err) => console.log(err))
     //     };
 
-        const updateState = (newPlaylist) => {
-            setSetList(newPlaylist);
-        }
+        // const updateState = (newPlaylist) => {
+        //     setSetList(newPlaylist);
+        // }
 
     // if (!this.state.setList) return null;
+    
     return (
         <div class="primary">
             <div class="entryBox">
