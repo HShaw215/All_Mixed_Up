@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const songController = require('./controllers/songController')
 const setController = require('./controllers/setController')
 
-const PORT = 3000;
+const PORT = 3003;
 
 const app = express();
 

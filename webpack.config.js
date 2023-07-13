@@ -36,9 +36,9 @@ module.exports = {
         },
         compress: true,
         proxy: {
-            '/**': 'http://localhost:3000/',
-            '/songs/**': 'http://localhost:3000/songs',
-            '/build/**': 'http://localhost:3000/build'
+            '/**': 'http://localhost:3003/',
+            '/songs/**': 'http://localhost:3003/songs',
+            '/build/**': 'http://localhost:3003/build'
     },
 },
     plugins: [
