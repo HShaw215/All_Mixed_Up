@@ -20,9 +20,6 @@ function Song(props) {
                 <span class="lengths">Length: </span>
                 <span class="songLength">{props.song.length}</span>
             </p>
-            <button class="delete">
-                X
-            </button>
         </div>
     );
 }

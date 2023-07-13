@@ -5,6 +5,8 @@ import Entry from './Entry.jsx';
 import Container from './Container.jsx';
 import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
+import { useAppDispatch, useAppSelector } from '../store/hooks.js'
+import { setTimer, setSetList } from '../store/appSlice.js'
 
 function App() {
 
@@ -12,7 +14,10 @@ function App() {
     //then have a seperate entry field for song entry that will pull random songs when submitted
     //once component mounts, have container display a box filled with all input songs from database
 
-    const [setList, setSetList] = useState([]);
+    const dispatch = useAppDispatch();
+    const setList = useAppSelector((state) => state.app.setList)
+
+    // const [setList, setSetList] = useState([]);
 
     // //how do we replace component did mount with useEffect for hooks?
 
@@ -23,9 +28,10 @@ function App() {
          //send a get request to the songs endpoint to get all the songs in the database
          fetch('/songs')
            .then(response => response.json())
-           .then(setList => setSetList(setList))
+           .then(setList => dispatch(setSetList(setList)))
            .catch((err) => console.log(err))
     //    }, []);
+    console.log(setList)
     };
 
     // const handleSubmit = (timer) => {
@@ -57,7 +63,7 @@ function App() {
             <Set />
             </div>
             <div class='containerBox'>
-            <Container setList={setList} />
+            <Container />
             </div>
         </div>
         );

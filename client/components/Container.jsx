@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 import Song from './Song.jsx';
+import { useAppDispatch, useAppSelector } from '../store/hooks.js';
 
-function Container({setList}) {
+function Container() {
     // const [setList, setSetList] = useState([])
+
+    const dispatch = useAppDispatch();
+    const setList = useAppSelector((state) => state.app.setList)
 
     // // //how do we replace component did mount with useEffect for hooks?
 
