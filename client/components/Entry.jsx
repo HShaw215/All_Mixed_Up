@@ -13,18 +13,6 @@ function Entry() {
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
  
-    // useEffect((entry) => {
-    //     console.log(entry)
-    //     console.log('Entry submitted')
-    //      //send a get request to the songs endpoint to get all the songs in the database
-    //      fetch('/', {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(entry)
-        //  })
-    //    })
     const handleSubmit = (name, key, length) => {
         console.log('handle is running')
             fetch('/', {
@@ -35,9 +23,8 @@ function Entry() {
                 body: JSON.stringify({name, key, length})
         }).then(response => response.json())
         .then(setList => dispatch(setSetList(setList)))
-        .catch((err) => console.log(err))
- //    }, []);
- console.log(setList)
+        .catch((err) => console.log(err))  
+        // console.log(setList)
     }
 
     return (
@@ -58,7 +45,6 @@ function Entry() {
         );
     }
 
-    // setEntry(songInput.current.value, keyInput.current.value, lengthInput.current.value)}
 
 //need to pull info from all text boxes when then add button is pressed and put into a request body. That request body then has to be sent
 //as a post request to the / route
