@@ -52,7 +52,7 @@ function Entry() {
             <label>Enter Length of Song:
                 <input id='lengthInput' type="text" placeholder="3" onChange = {e => setLength(e.target.value)}></input>
             </label>
-            <button id='add' onClick= {() => handleSubmit(name, key, length)}>Add To Playlist</button>
+            <button id='add' type='button' onClick={() => console.log(name, key, length)}>Add To Playlist</button>
            </form>
         </div>
         );
