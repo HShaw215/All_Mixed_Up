@@ -1,12 +1,15 @@
 // import React, { Component } from 'react';
 // import { render } from "react-dom";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../scss/containerStyles.scss';
-// import Container from './Container.jsx';
+import { useAppDispatch } from '../store/hooks.js'
+import { setSetList } from '../store/appSlice.js'
 
 function Set() {
 
-    const [timer, setTimer] = useState('');
+    const [timer, setTimer] = useState(0);
+
+    const dispatch = useAppDispatch();
 
     // const handleSubmit = (timer) => {
     //     // console.log(timer)
@@ -21,17 +24,28 @@ function Set() {
     //     .then(setList =>updateState(setList))
     //     .catch((err) => console.log(err))
 
+    const timeSubmit = timer => {
+        console.log('handle is running')
+            fetch('/time', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({timer})
+        }).then(response => response.json())
+        .then(setList => dispatch(setSetList(setList)))
+        .catch((err) => console.log(err))  
+    }
+
     //should've done the work around where nothing populates when you load the page until you say how long you want to play for. Then it renders
         //and updates so you don't have to worry about doing all the state stuff
 
-    // }
-    // onClick={ () => handleSubmit(timer)}
     return (
         <div>
            <form>
             <label>How Long is Your Set?
                 <input id='setTimer' type="text" placeholder="2" onChange = {e => setTimer(e.target.value)}></input>
-                <button id='vibes'>Vibes</button>
+                <button id='vibes' type='button' onClick={() => timeSubmit(timer)}>Vibes</button>
             </label>
            </form>
         </div>

@@ -7,22 +7,19 @@ import '../scss/containerStyles.scss';
 function Song(props) {
 
     return (
-        <div class={props.song.key}>
+        <div className={props.song.key}>
             <p>
-                <span class="names">Name: </span>
-                <span class="songName">{props.song.name}</span>
+                <span className="names">Name: </span>
+                <span className="songName">{props.song.name}</span>
             </p>
             <p>
-                <span class="keys">Key: </span> 
-                <span class="songKey">{props.song.key}</span>
+                <span className="keys">Key: </span> 
+                <span className="songKey">{props.song.key}</span>
             </p>
             <p>
-                <span class="lengths">Length: </span>
-                <span class="songLength">{props.song.length}</span>
+                <span className="lengths">Length: </span>
+                <span className="songLength">{props.song.length}</span>
             </p>
-            <button class="delete">
-                X
-            </button>
         </div>
     );
 }
