@@ -13,8 +13,8 @@ const setController = {
         const newTimer = timer * 6;
         // console.log(newTimer);
         //try using aggregate to get random amount of docs (need to figure out how to import whole database as db)
-       res.locals.playlist = db.songs.aggregate([
-        { $sample: { size: newtimer } },
+       res.locals.playlist = await songSchema.aggregate([
+        { $sample: { size: newTimer } },
         { $sort: { key: 1}},
       ]);
         // {'$match': {}}, 

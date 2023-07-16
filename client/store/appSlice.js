@@ -13,19 +13,19 @@ const appSlice = createSlice({
     initialState,
     reducers: {
         setUserID: (state, action) => {
-            state.user = action.payload;
+            state.userID = action.payload;
         },
         setSetList: (state, action) => {
-            state.user = action.payload;
+            state.setList = action.payload;
         },
         setTimer: (state, action) => {
-            state.user = action.payload;
+            state.timer = action.payload;
         },
         setSongName: (state, action) => {
-            state.user = action.payload;
+            state.songName = action.payload;
         },
         setSongKey: (state, action) => {
-            state.user = action.payload;
+            state.songKey = action.payload;
         },
     },
 });
