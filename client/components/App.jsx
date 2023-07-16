@@ -6,7 +6,7 @@ import Container from './Container.jsx';
 import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
 import { useAppDispatch, useAppSelector } from '../store/hooks.js'
-import { setTimer, setSetList } from '../store/appSlice.js'
+import { setSetList } from '../store/appSlice.js'
 
 function App() {
 

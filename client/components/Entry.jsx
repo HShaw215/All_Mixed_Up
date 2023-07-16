@@ -2,11 +2,16 @@
 import { render } from "react-dom";
 import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss'
+import { useAppDispatch, useAppSelector } from '../store/hooks.js'
+import { setSetList } from '../store/appSlice.js'
 
 function Entry() {
     const [name, setName] = useState('');
     const [key, setKey] = useState('');
     const [length, setLength] = useState('');
+
+    const dispatch = useAppDispatch();
+    const setList = useAppSelector((state) => state.app.setList)
  
     // useEffect((entry) => {
     //     console.log(entry)
@@ -28,7 +33,11 @@ function Entry() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({name, key, length})
-        });
+        }).then(response => response.json())
+        .then(setList => dispatch(setSetList(setList)))
+        .catch((err) => console.log(err))
+ //    }, []);
+ console.log(setList)
     }
 
     return (
