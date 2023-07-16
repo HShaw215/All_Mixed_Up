@@ -55,14 +55,14 @@ function App() {
     // if (!this.state.setList) return null;
     
     return (
-        <div class="primary">
-            <div class="entryBox">
+        <div className="primary">
+            <div className="entryBox">
             <Entry />
             </div>
-            <div class='setBox'>
+            <div className='setBox'>
             <Set />
             </div>
-            <div class='containerBox'>
+            <div className='containerBox'>
             <Container />
             </div>
         </div>

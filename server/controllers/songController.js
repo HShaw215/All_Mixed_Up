@@ -60,8 +60,7 @@ async addSong(req, res, next) {
     // })
     // else{
     try {
-        await Song.create({name: name, key: key, length: length})
-        res.locals.songs = await Song.find({});
+        res.locals.song = await Song.create({name: name, key: key, length: length})
         return next();
     }
     catch {

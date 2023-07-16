@@ -33,7 +33,7 @@ app.get('/songs', songController.getAllSongs, (req, res) => {
 })
 
 //when a user clicks the button to add songs, this route will run and add the song to the database. Not sure what I need to add so the page auto updates when this occurs
-app.post('/', songController.addSong, (req, res) => {
+app.post('/', songController.addSong, songController.getAllSongs, (req, res) => {
     console.log('song added to playlist');
     res.status(201).send(res.locals.songs);
 });

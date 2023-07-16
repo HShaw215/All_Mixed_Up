@@ -3,12 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import '../scss/containerStyles.scss';
 import Song from './Song.jsx';
-import { useAppDispatch, useAppSelector } from '../store/hooks.js';
+import { useAppSelector } from '../store/hooks.js';
 
 function Container() {
     // const [setList, setSetList] = useState([])
 
-    const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
 
     // // //how do we replace component did mount with useEffect for hooks?
@@ -71,7 +70,7 @@ function Container() {
     // console.log(this.state.setList.songs)   //give an array of each song object, need to make a new div for each song
     // const set = this.state.setList.songs.forEach(song => <div className="songBox" key={song.key}>{song}</div>);
     return (
-        <div class="container">
+        <div className="container">
             {songsToDisplay}
         </div>
     );
