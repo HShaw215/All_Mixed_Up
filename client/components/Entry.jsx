@@ -11,8 +11,7 @@ function Entry() {
     const [length, setLength] = useState('');
 
     const dispatch = useAppDispatch();
-    const setList = useAppSelector((state) => state.app.setList)
- 
+
     const handleSubmit = (name, key, length) => {
         console.log('handle is running')
             fetch('/', {
