@@ -1,4 +1,3 @@
-const Song = require('../models/songModel');
 const songSchema = require('../models/songModel');
 
 const setController = {
@@ -8,19 +7,13 @@ const setController = {
     async createPlaylist(req, res, next) {
         console.log('setController createPlaylist is running');
         const { timer } = req.body;
-        // console.log(timer)
-        //multiple input time by 60 to get total number of minutes (changing to 6 to get number of songs desired)
-        const newTimer = timer * 6;
-        // console.log(newTimer);
-        //try using aggregate to get random amount of docs (need to figure out how to import whole database as db)
+        //multiple input time by 60 to get total number of minutes (average time is about 7 minutes so multiply timer by 8.5 to get rough total)
+        const newTimer = timer * 9;
+        //invoke aggregate function on database to pull only a size adding up to timer, with data sorted by key
        res.locals.playlist = await songSchema.aggregate([
         { $sample: { size: newTimer } },
         { $sort: { key: 1}},
       ]);
-        // {'$match': {}}, 
-        // {'$sample': {'size': newTimer}}]));
-        //now we need to make a find request to the server where somehow its a random pull of data adding up to newTimer
-        // res.locals.playlist = timer;
         return next()
     }
 

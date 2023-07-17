@@ -26,7 +26,7 @@ function App() {
     //  useEffect(() => {
          console.log('App mounted')
          //send a get request to the songs endpoint to get all the songs in the database
-         fetch('/songs')
+         fetch('/api/songs')
            .then(response => response.json())
            .then(setList => dispatch(setSetList(setList)))
            .catch((err) => console.log(err))

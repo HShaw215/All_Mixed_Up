@@ -14,7 +14,7 @@ function Entry() {
 
     const handleSubmit = (name, key, length) => {
         console.log('handle is running')
-            fetch('/', {
+            fetch('/api/songs', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

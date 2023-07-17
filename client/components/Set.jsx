@@ -26,7 +26,7 @@ function Set() {
 
     const timeSubmit = timer => {
         console.log('handle is running')
-            fetch('/time', {
+            fetch('/api/timer/', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
