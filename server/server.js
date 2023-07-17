@@ -1,11 +1,9 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+
 const songRoute = require('./routes/songRoute');
 const timerRoute = require('./routes/timerRoute');
-
-const songController = require('./controllers/songController')
-const setController = require('./controllers/setController')
 
 const PORT = 3003;
 
@@ -29,23 +27,10 @@ app.get('/', (req, res) => {
 }
 
 //this will be the route for when the components on the page mount. A request will come in for the container to populate with songs from database
-// app.get('/songs', songController.getAllSongs, (req, res) => {
-//     console.log('songs recieved from database')
-//     res.status(200).send(res.locals.songs)
-// })
 app.use('/api/songs', songRoute)
 
-//when a user clicks the button to add songs, this route will run and add the song to the database. Not sure what I need to add so the page auto updates when this occurs
-// app.post('/', songController.addSong, songController.getAllSongs, (req, res) => {
-//     console.log('song added to playlist');
-//     res.status(201).send(res.locals.songs);
-// });
 
 //route for sending set time filter
-// app.post('/api/time', setController.createPlaylist, (req, res) => {
-//     console.log('playlist generated');
-//     res.status(200).send(res.locals.playlist);
-// })
 app.use('/api/timer', timerRoute)
 
 // //route to delete a song when clicked

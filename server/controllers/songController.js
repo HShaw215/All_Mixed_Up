@@ -1,6 +1,5 @@
 // const { createSearchParams } = require('react-router-dom');
 const Song = require('../models/songModel');
-const songSchema = require('../models/songModel');
 
 const songController = {
 
