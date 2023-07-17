@@ -1,8 +1,6 @@
-// import React, { Component } from 'react';
-import { render } from "react-dom";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../scss/containerStyles.scss'
-import { useAppDispatch, useAppSelector } from '../store/hooks.js'
+import { useAppDispatch } from '../store/hooks.js'
 import { setSetList } from '../store/appSlice.js'
 
 function Entry() {

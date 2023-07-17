@@ -1,6 +1,6 @@
 // import React, { Component } from 'react';
 // import { render } from "react-dom";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../scss/containerStyles.scss';
 
 

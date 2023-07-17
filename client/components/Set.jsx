@@ -1,5 +1,3 @@
-// import React, { Component } from 'react';
-// import { render } from "react-dom";
 import React, { useState } from 'react';
 import '../scss/containerStyles.scss';
 import { useAppDispatch } from '../store/hooks.js'
@@ -10,19 +8,6 @@ function Set() {
     const [timer, setTimer] = useState(0);
 
     const dispatch = useAppDispatch();
-
-    // const handleSubmit = (timer) => {
-    //     // console.log(timer)
-    //         fetch('/time', {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json"
-    //             },
-    //             body: JSON.stringify({timer})
-    //     })
-    //     .then(response => response.json())
-    //     .then(setList =>updateState(setList))
-    //     .catch((err) => console.log(err))
 
     const timeSubmit = timer => {
         console.log('handle is running')
@@ -38,10 +23,7 @@ function Set() {
 
         document.getElementById('setTimer').value = '';
     }
-
-    //should've done the work around where nothing populates when you load the page until you say how long you want to play for. Then it renders
-        //and updates so you don't have to worry about doing all the state stuff
-
+    
     return (
         <div>
            <form>
