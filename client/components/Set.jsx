@@ -35,6 +35,8 @@ function Set() {
         }).then(response => response.json())
         .then(setList => dispatch(setSetList(setList)))
         .catch((err) => console.log(err))  
+
+        document.getElementById('setTimer').value = '';
     }
 
     //should've done the work around where nothing populates when you load the page until you say how long you want to play for. Then it renders

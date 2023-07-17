@@ -23,7 +23,10 @@ function Entry() {
         }).then(response => response.json())
         .then(setList => dispatch(setSetList(setList)))
         .catch((err) => console.log(err))  
-        // console.log(setList)
+
+        document.getElementById('songInput').value = '';
+        document.getElementById('keyInput').value = '';
+        document.getElementById('lengthInput').value = '';
     }
 
     return (
