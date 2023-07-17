@@ -23,7 +23,7 @@ function App() {
            .then(response => response.json())
            .then(setList => dispatch(setSetList(setList)))
            .catch((err) => console.log(err))
-    console.log(setList)
+        console.log(setList)
     };
     
     return (
@@ -38,7 +38,7 @@ function App() {
             <Container />
             </div>
         </div>
-        );
+    );
 }
 
 export default App;
