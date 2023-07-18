@@ -10,7 +10,6 @@ body {
     margin: auto;
     height: 100%;
     width: auto;
-    background: linear-gradient(to left, #1d976c, #93f9b9);
 }
 
 .primary {
@@ -67,13 +66,13 @@ input {
 
 .container {
     border: 1px solid black;
-    margin-top: 2em;
+    margin-top: 1.5em;
     display: flex;
     min-width: 72.5em;
     max-width: 72.5em;
     flex-wrap: wrap;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
