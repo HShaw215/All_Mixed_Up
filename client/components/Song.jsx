@@ -19,7 +19,7 @@ function Song(props) {
                 <span className="songLength">{props.song.length}</span>
             </p>
             <button className="delete" onClick={() => console.log(props.song.name)}>
-                Delete
+                X
             </button>
         </div>
     );
