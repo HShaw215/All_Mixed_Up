@@ -7,8 +7,11 @@ function Container() {
 
     const setList = useAppSelector((state) => state.app.setList)
 
+    //declare variable songsToDisplay and assign to an empty array
     const songsToDisplay = [];
+    //iterate through each song in setList
     for (let i = 0; i < setList.length; i++){
+        //push a new Song element for each song to songsToDisplay array
         songsToDisplay.push(<Song key={i} song={setList[i]}/>)
     }
 
