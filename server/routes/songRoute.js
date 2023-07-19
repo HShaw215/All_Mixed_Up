@@ -15,4 +15,10 @@ songRoute.post('/', songController.addSong, songController.getAllSongs, (req, re
     res.status(201).send(res.locals.songs);
 });
 
+//when a user clicks the delete button, route will delete song from database, then return updated list of songs
+songRoute.post('/delete', songController.deleteSong, songController.getAllSongs, (req, res) => {
+    console.log('song deleted from database');
+    res.status(200).send(res.locals.songs)
+})
+
 module.exports = songRoute;
