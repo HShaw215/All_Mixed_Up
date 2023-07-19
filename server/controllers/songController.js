@@ -1,4 +1,3 @@
-// const { createSearchParams } = require('react-router-dom');
 const Song = require('../models/songModel');
 
 const songController = {
@@ -32,21 +31,20 @@ const songController = {
         }
     },
 
-
-
-    // async deleteSong(req, res, next) {
-    //     console.log('deleteSong controller running')
-    //     console.log(req.body.name)
-    //     try {
-    //         res.locals.deleted = await Song.findOneAndDelete({name: req.body.name});
-    //         return next();
-    //     }
-    //     catch {
-    //         return next({
-    //             err: {err: "Could not find song to delete"}
-    //         });
-    //     }
-    // },
+    //declare method deleteSong that finds song based on passed in name and deletes from database
+    async deleteSong(req, res, next) {
+        console.log('deleteSong controller running')
+        console.log(req.body.name)
+        try {
+            res.locals.deleted = await Song.findOneAndDelete({name: req.body.name});
+            return next();
+        }
+        catch {
+            return next({
+                err: {err: "Could not find song to delete"}
+            });
+        }
+    },
 
 };
 

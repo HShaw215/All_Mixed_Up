@@ -36,7 +36,10 @@ module.exports = {
         },
         compress: true,
         proxy: {
-            '/api/**': 'http://localhost:3003/',
+            '/api/**': {
+            target: 'http://localhost:3003/',
+            secure: false,
+        },
     },
 },
     plugins: [

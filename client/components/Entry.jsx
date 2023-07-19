@@ -10,7 +10,8 @@ function Entry() {
 
     const dispatch = useAppDispatch();
 
-    const handleSubmit = (name, key, length) => {
+    //declare function songSubmit that accepts name, key, and length to send post request for song creation in database
+    const songSubmit = (name, key, length) => {
         console.log('handle is running')
             fetch('/api/songs', {
                 method: "POST",
@@ -39,15 +40,10 @@ function Entry() {
             <label>Enter Length of Song:
                 <input id='lengthInput' type="text" placeholder="3" onChange = {e => setLength(e.target.value)}></input>
             </label>
-            <button id='add' type='button' onClick={() => handleSubmit(name, key, length)}>Add To Playlist</button>
+            <button id='add' type='button' onClick={() => songSubmit(name, key, length)}>Add To Playlist</button>
            </form>
         </div>
         );
     }
-
-
-//need to pull info from all text boxes when then add button is pressed and put into a request body. That request body then has to be sent
-//as a post request to the / route
-
 
 export default Entry;

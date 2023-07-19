@@ -8,14 +8,10 @@ import { setSetList } from '../store/appSlice.js'
 
 function App() {
 
-    //idea for render is to have app render the input fields for entering songs into the playlist
-    //then have a seperate entry field for song entry that will pull random songs when submitted
-    //once component mounts, have container display a box filled with all input songs from database
-
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
 
-    // //only have pull all songs when set list is an empty array
+    //only have pull all songs when set list is an empty array
     if (setList.length === 0){
          console.log('App mounted')
          //send a get request to the songs endpoint to get all the songs in the database
