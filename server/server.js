@@ -32,14 +32,20 @@ app.use('/api/timer', timerRoute)
 
 //catch all route
 app.use('*', (req, res) => {
-    res.status(404).send('Not Found')
+    res.status(404).send('Page not found')
 });
 
 //global error handler
 app.use((err, req, res, next) => {
-    console.log(err);
-    res.status(500).send({ error : err});
-})
+    const defaultErr = {
+    log: `Express error handler caught unknown middleware error: ${err}`,
+    status: 400,
+    message: { err: "An error occurred" },
+  };
+  const errorObj = Object.assign({}, defaultErr, err);
+  console.log(errorObj.log);
+  return res.status(errorObj.status).json(errorObj.message);
+});
 
 app.listen(PORT, ()=>{ console.log(`Listening on port ${PORT}...`); });
 module.exports = app;
