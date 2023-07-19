@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production'){
     app.use('/', express.static(path.join(__dirname, '../build')))
 }
 else {
-//route to serve tehe index html when the page is loaded
+//route to serve the index html when the page is loaded
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, '../index.html'));
     })
