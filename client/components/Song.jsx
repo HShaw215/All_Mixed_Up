@@ -7,7 +7,8 @@ function Song(props) {
 
     const dispatch = useAppDispatch();
 
-    const handleDelete = (name) => {
+    //declare function deleteSubmit that accepts an input name to be sent in a post request to delete song from the database
+    const deleteSubmit = (name) => {
         console.log('handleDelete is running')
             fetch('/api/songs/delete', {
                 method: "POST",
@@ -36,18 +37,11 @@ function Song(props) {
                 <span className="lengths">Length: </span>
                 <span className="songLength">{props.song.length}</span>
             </p>
-            <button className="delete" onClick={() => handleDelete(props.song.name)}>
+            <button className="delete" onClick={() => deleteSubmit(props.song.name)}>
                 X
             </button>
         </div>
     );
 }
-
-
-
-
-
-
-
 
 export default Song;
