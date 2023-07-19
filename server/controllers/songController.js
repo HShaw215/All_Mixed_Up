@@ -31,7 +31,6 @@ const songController = {
         }
     },
 
-
     //declare method deleteSong that finds song based on passed in name and deletes from database
     async deleteSong(req, res, next) {
         console.log('deleteSong controller running')
