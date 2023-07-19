@@ -37,8 +37,6 @@ module.exports = {
         compress: true,
         proxy: {
             '/api/**': 'http://localhost:3003/',
-            // '/songs/**': 'http://localhost:3003/songs',
-            // '/build/**': 'http://localhost:3003/build'
     },
 },
     plugins: [
