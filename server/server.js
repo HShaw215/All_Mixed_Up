@@ -26,23 +26,20 @@ app.get('/', (req, res) => {
     })
 }
 
-//this will be the route for when the components on the page mount. A request will come in for the container to populate with songs from database
+//route for fetching, adding, and deleting songs
 app.use('/api/songs', songRoute)
 
 
 //route for sending set time filter
 app.use('/api/timer', timerRoute)
 
-// //route to delete a song when clicked
-// app.delete('/', songController.deleteSong, (req, res) => {
-//     console.log('song deleted from playlist');
-//     res.status(200).send(res.locals.deleted)
-// })
 
+//catch all route
 app.use('*', (req, res) => {
     res.status(404).send('Not Found')
 });
 
+//global error handler
 app.use((err, req, res, next) => {
     console.log(err);
     res.status(500).send({ error : err});
