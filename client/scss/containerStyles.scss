@@ -1,17 +1,22 @@
 
 @import 'colors';
 
+body {
+    overflow: auto;
+    background: linear-gradient(to left, #1d976c, #93f9b9);
+}
+
 #root {
     margin: auto;
     height: 100%;
     width: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background: linear-gradient(to left, #1d976c, #93f9b9);
 }
 
 .primary {
     display: flex;
+    overflow: hidden;
+    height: auto;
+    min-height: 4vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -47,24 +52,12 @@ input {
     border-width: 1.5px;
 }
 
-.songName{
-    
-}   
-
 .names {
     font-weight: bold;
 }
 
-.songKey {
-
-}
-
 .keys {
     font-weight: bold;
-}
-
-.songLength {
-
 }
 
 .lengths {
@@ -73,12 +66,13 @@ input {
 
 .container {
     border: 1px solid black;
-    margin-top: 2em;
+    margin-top: 1.5em;
     display: flex;
     min-width: 72.5em;
     max-width: 72.5em;
     flex-wrap: wrap;
     text-align: center;
+    margin-bottom: 3em;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
@@ -179,7 +173,8 @@ input {
 }
 
 .delete {
-    width: 60px;
+    width: 22px;
+    justify-content: center;
     border-radius: 7px;
     background-color: white;
     margin-bottom: 10px;
