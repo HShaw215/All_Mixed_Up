@@ -1,6 +1,6 @@
 ## All Mixed UP
 
-All Mixed Up is a DJ Setlist creator that randomly generates playlists for performances based a given set time. Holding all possible songs in a personal databse, playlists are returned in key order so that songs can be easily mixed in without any additional planning required.
+All Mixed Up is a DJ Setlist creator that randomly generates playlists for performances based on a given set time. Holding all possible songs in a personal database, setlists are returned in key order so that songs can be easily mixed in without any additional planning required.
 
 ## Tech Stack
 
