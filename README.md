@@ -14,13 +14,13 @@ All Mixed Up is a DJ Setlist creator that randomly generates playlists for perfo
 
 ## About
 
-Currently All Mixed Up is a personal project, so the database is composed of preselected songs. Login functionality to store individual users with their own song database is under development and will we implemented soon.
+Currently All Mixed Up is a personal project, so the database is composed of preselected songs. Login functionality to store individual users with their own song database is under development and will be implemented soon.
 
 ## Installation
 
 Intallation Requires only a few steps:
 
-1. Clone the current version of the repository to your local machine
+1. Clone the repository to your local machine
 2. Install dependencies by running 'npm install'
 3. Start the application by running 'npm run dev'
 4. Enjoy!
