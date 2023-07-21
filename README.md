@@ -6,10 +6,10 @@ All Mixed Up is a DJ Setlist creator that randomly generates playlists for perfo
 
 ![React](https://img.shields.io/badge/-react-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=react&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node-3C873A?style=for-the-badge&logo=express&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node-3C873A?style=for-the-badge&logo=node&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-00ED64?style=for-the-badge&logo=express&logoColor=white)
-![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-00ED64?style=for-the-badge&logo=mongodb&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 ![Webpack](https://img.shields.io/badge/Webpack-2CA5E0?style=for-the-badge&logo=webpack&logoColor=white)
 
 ## About
