@@ -191,7 +191,16 @@ input {
 
 .box {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+#loginButton {
+    height: 4vh;
+    width: 6vw;
+    justify-content: center;
+    margin: auto;
 }
 
 
