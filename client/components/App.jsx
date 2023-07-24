@@ -5,6 +5,7 @@ import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
 import { useAppDispatch, useAppSelector } from '../store/hooks.js'
 import { setSetList } from '../store/appSlice.js'
+import LoginPage from './loginContainer/loginPage.jsx';
 
 function App() {
 
@@ -23,16 +24,19 @@ function App() {
     };
     
     return (
-        <div className="primary">
-            <div className="entryBox">
-            <Entry />
-            </div>
-            <div className='setBox'>
-            <Set />
-            </div>
-            <div className='containerBox'>
-            <Container />
-            </div>
+        // <div className="primary">
+        //     <div className="entryBox">
+        //     <Entry />
+        //     </div>
+        //     <div className='setBox'>
+        //     <Set />
+        //     </div>
+        //     <div className='containerBox'>
+        //     <Container />
+        //     </div>
+        // </div>
+        <div>
+            <LoginPage />
         </div>
     );
 }

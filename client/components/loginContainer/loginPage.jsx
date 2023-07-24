@@ -1,16 +1,16 @@
 import React from 'react';
-import '../scss/containerStyles.scss'
-import { useAppDispatch, useAppSelector } from '../store/hooks.js'
-
-function Login() {
+import '../../scss/containerStyles.scss'
+import { useAppDispatch } from '../../store/hooks.js'
+import LoginContainer from './loginContainer.jsx'
+function LoginPage() {
 
     const dispatch = useAppDispatch();
     
     return (
-        <div>
-    
+        <div className='loginBox'>
+            <LoginContainer />
         </div>
     );
 }
 
-export default Login;
+export default LoginPage;

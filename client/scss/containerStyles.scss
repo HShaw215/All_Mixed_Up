@@ -180,5 +180,18 @@ input {
     margin-bottom: 10px;
 }
 
+.loginBox {
+    display: flex;
+    border: 10px solid black;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    height: 30vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column
+}
 
 
