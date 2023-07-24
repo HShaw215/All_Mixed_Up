@@ -187,6 +187,7 @@ input {
     border-radius: 5px;
     justify-content: center;
     height: 25vh;
+    min-height: 175px;
     width: 400px;
     margin: auto;
     margin-top: 30vh;
@@ -214,7 +215,8 @@ input {
 }
 
 #loginButton:hover {
-    background-color:#1d976c
+    background-color:#8ae9c8;
+    border-radius: 5px;
 }
 
 .signup {
