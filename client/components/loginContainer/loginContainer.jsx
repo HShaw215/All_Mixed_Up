@@ -10,11 +10,21 @@ function LoginContainer() {
 
     const dispatch = useAppDispatch();
     const userID = useAppSelector((state) => state.app.userID);
+    const status = false;
 
     const loginSubmit = async (username, password) => {
         console.log('login form submitting');
-        dispatch(setUserID(username));
-
+        // dispatch(setUserID(username));
+        // fetch('/api/login', {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({username, password})
+        // }).then(response => status = response)
+        // if (status) Navigate('/main')
+        // else alert('Invalid Username or Password')
+        
         // console.log(username, password)
         // console.log('userID:', userID)
 

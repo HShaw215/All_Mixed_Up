@@ -182,13 +182,14 @@ input {
 
 .loginBox {
     display: flex;
-    border: 10px solid black;
+    border: 5px solid black;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
-    height: 30vh;
+    height: 25vh;
     width: 400px;
     margin: auto;
-    margin-top: 25vh;
+    margin-top: 30vh;
 }
 
 .box {
