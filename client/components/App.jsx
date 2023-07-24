@@ -12,6 +12,7 @@ function App() {
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
 
+    //For adding login, will have to move this to when main page renders
     //only have pull all songs when set list is an empty array
     if (setList.length === 0){
          console.log('App mounted')
@@ -35,7 +36,7 @@ function App() {
         //     <Container />
         //     </div>
         // </div>
-        <div class='loginBox'>
+        <div className='loginBox'>
             <LoginPage />
         </div>
     );
