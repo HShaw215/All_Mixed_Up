@@ -185,8 +185,10 @@ input {
     border: 10px solid black;
     align-items: center;
     justify-content: center;
-    margin: auto auto;
     height: 30vh;
+    width: 400px;
+    margin: auto;
+    margin-top: 25vh;
 }
 
 .box {
@@ -194,13 +196,24 @@ input {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    gap: 15px;
+}
+
+.loginForm {
+    box-shadow: 1px 1px 1px black;
+    min-height: 2vh;
 }
 
 #loginButton {
-    height: 4vh;
-    width: 6vw;
+    min-height: 4vh;
+    min-width: 6vw;
     justify-content: center;
     margin: auto;
+    box-shadow: 1px 1px 1px black;
+}
+
+#loginButton:hover {
+    background-color:#1d976c
 }
 
 

@@ -8,11 +8,12 @@ function LoginContainer() {
     const [password, setPassword] = useState('');
 
     const dispatch = useAppDispatch();
+    const userId = useAppSelector((state) => state.app.userId)
     
     return (
         <div className='box'>
-            <input placeholder='Username'  onChange = {e => setUsername(e.target.value)}></input>
-            <input placeholder='Password'  onChange = {e => setPassword(e.target.value)}></input>
+            <input class='loginForm'placeholder='Username'  onChange = {e => setUsername(e.target.value)}></input>
+            <input class='loginForm' placeholder='Password'  onChange = {e => setPassword(e.target.value)}></input>
            <button type='submit' id='loginButton' onClick = {() => console.log('Logging In', username, password)} >Submit</button>
         </div>
     );

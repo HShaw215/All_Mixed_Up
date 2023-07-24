@@ -7,7 +7,7 @@ function LoginPage() {
     const dispatch = useAppDispatch();
     
     return (
-        <div className='loginBox'>
+        <div>
             <LoginContainer />
         </div>
     );

@@ -35,7 +35,7 @@ function App() {
         //     <Container />
         //     </div>
         // </div>
-        <div>
+        <div class='loginBox'>
             <LoginPage />
         </div>
     );
