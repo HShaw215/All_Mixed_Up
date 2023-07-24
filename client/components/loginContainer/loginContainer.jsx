@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
 import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
+import { setUserID } from '../../store/appSlice';
 
 function LoginContainer() {
 
@@ -8,13 +9,24 @@ function LoginContainer() {
     const [password, setPassword] = useState('');
 
     const dispatch = useAppDispatch();
-    const userId = useAppSelector((state) => state.app.userId)
+    const userID = useAppSelector((state) => state.app.userID);
+
+    const loginSubmit = async (username, password) => {
+        console.log('login form submitting');
+        dispatch(setUserID(username));
+
+        // console.log(username, password)
+        // console.log('userID:', userID)
+
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+    };
     
     return (
         <div className='box'>
-            <input class='loginForm'placeholder='Username'  onChange = {e => setUsername(e.target.value)}></input>
-            <input class='loginForm' placeholder='Password'  onChange = {e => setPassword(e.target.value)}></input>
-           <button type='submit' id='loginButton' onClick = {() => console.log('Logging In', username, password)} >Submit</button>
+            <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
+            <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
+           <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
         </div>
     );
 }
