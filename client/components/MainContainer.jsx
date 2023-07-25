@@ -5,9 +5,8 @@ import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
 import { useAppDispatch, useAppSelector } from '../store/hooks.js'
 import { setSetList } from '../store/appSlice.js'
-import LoginPage from './loginContainer/LoginPage.jsx';
 
-function DashboardContainer() {
+function MainContainer() {
 
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
@@ -39,4 +38,4 @@ function DashboardContainer() {
     );
 }
 
-export default DashboardContainer;
+export default MainContainer;
