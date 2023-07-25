@@ -12,8 +12,8 @@ function SignUpContainer() {
     const userID = useAppSelector((state) => state.app.userID);
     const status = false;
 
-    const loginSubmit = async (username, password) => {
-        console.log('login form submitting');
+    const signupSubmit = async (username, password) => {
+        console.log('sign up form submitting');
         // dispatch(setUserID(username));
         // fetch('/api/signup', {
         //     method: "POST",
@@ -23,6 +23,7 @@ function SignUpContainer() {
         //     body: JSON.stringify({username, password})
         // }).then(response => status = response)
         // if (status) Navigate('/main')
+        //else alert('Username already taken')
 
         // console.log(username, password)
         // console.log('userID:', userID)
@@ -35,7 +36,7 @@ function SignUpContainer() {
         <div className='box'>
             <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
-           <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
+           <button type='submit' id='loginButton' onClick = {() => signupSubmit(username, password)} >Submit</button>
            <a class='login' href='/login'>Login</a>
         </div>
     );
