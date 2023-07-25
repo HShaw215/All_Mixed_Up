@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
 import { setUserID } from '../../store/appSlice';
 
@@ -24,7 +25,7 @@ function SignUpContainer() {
         //     },
         //     body: JSON.stringify({username, password})
         // }).then(response => status = response)
-        // if (status) Navigate('/main')
+        // if (status) navigate('/main')
         //else alert('Username already taken')
 
         // console.log(username, password)
@@ -39,7 +40,7 @@ function SignUpContainer() {
             <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
            <button type='submit' id='loginButton' onClick = {() => signupSubmit(username, password)} >Submit</button>
-           <a class='createAccount' href='/login'>Login</a>
+           <Link className="createAccount" to='/' >Login</Link>
         </div>
     );
 }
