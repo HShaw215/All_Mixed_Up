@@ -182,7 +182,7 @@ input {
 
 .loginBox {
     display: flex;
-    border: 5px solid black;
+    // border: 5px solid black;
     align-items: center;
     border-radius: 5px;
     justify-content: center;
@@ -190,7 +190,7 @@ input {
     min-height: 175px;
     width: 400px;
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 35vh;
 }
 
 .box {
@@ -205,7 +205,6 @@ input {
     width: 300px;
     height: 30px;
     border-radius: 7px;
-    border: none;
     box-shadow: 1px 1px 1px 1px #6b9b80;
     text-align: center;
     margin: auto;
@@ -217,7 +216,6 @@ input {
     width: 190px;
     height: 30px;
     border-radius: 7px;
-    border: none;
     cursor: pointer;
     background-color: #29ba6a;
     box-shadow: 1px 1px 1px 1px #1c7745;
