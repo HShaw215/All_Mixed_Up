@@ -8,3 +8,4 @@ signupRoute.post('/', signupController.createUser, (req, res) => {
     res.status(201).send(res.locals.status)
 });
 
+module.exports = signupRoute;
