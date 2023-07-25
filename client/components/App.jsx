@@ -5,12 +5,14 @@ import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
 import { useAppDispatch, useAppSelector } from '../store/hooks.js'
 import { setSetList } from '../store/appSlice.js'
+import LoginPage from './loginContainer/loginPage.jsx';
 
 function App() {
 
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
 
+    //For adding login, will have to move this to when main page renders
     //only have pull all songs when set list is an empty array
     if (setList.length === 0){
          console.log('App mounted')
@@ -34,6 +36,9 @@ function App() {
             <Container />
             </div>
         </div>
+        // <div className='loginBox'>
+        //     <LoginPage />
+        // </div>
     );
 }
 

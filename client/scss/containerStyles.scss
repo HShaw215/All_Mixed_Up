@@ -180,5 +180,70 @@ input {
     margin-bottom: 10px;
 }
 
+.loginBox {
+    display: flex;
+    // border: 5px solid black;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    height: 25vh;
+    min-height: 175px;
+    width: 400px;
+    margin: auto;
+    margin-top: 35vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    gap: 15px;
+}
+
+.loginForm {
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 1px #6b9b80;
+    text-align: center;
+    margin: auto;
+}
+
+#loginButton {
+    margin: auto;
+    font-size: 16px;
+    width: 190px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #29ba6a;
+    box-shadow: 1px 1px 1px 1px #1c7745;
+}
+
+#loginButton:hover {
+    background-color: #46c57f;
+    box-shadow: 1px 1px 1px 1px #688b78;
+    transition-duration: 300ms;
+}
+
+#loginButton:active {
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+  }
+
+.signup {
+    margin: auto;
+    justify-content: center;
+    text-decoration: none;
+    color: black
+}
+
+.createAccount {
+    margin: auto;
+    text-decoration: underline;
+    color:#05361b
+}
 
 
