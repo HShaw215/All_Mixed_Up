@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
     })
 }
 
+//route for creating a new user
+app.use('/api/signup')
+
+//route for verifying user and logging in
+app.use('/api/login')
+
 //route for fetching, adding, and deleting songs
 app.use('/api/songs', songRoute)
 
