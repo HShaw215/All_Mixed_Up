@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
+import Nav from 'react-bootstrap/Nav';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
 import { setUserID } from '../../store/appSlice';
@@ -9,6 +10,7 @@ function LoginContainer() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    // const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const userID = useAppSelector((state) => state.app.userID);
     const status = false;
@@ -39,9 +41,9 @@ function LoginContainer() {
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
            <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
            <div className="createAccount">
-            <Nav.Link as={Link} to="/createAccount">
+            {/* <Nav.Link as={Link} to="/createAccount">
                 Create an account
-            </Nav.Link>
+            </Nav.Link> */}
             </div>
         </div>
     );
