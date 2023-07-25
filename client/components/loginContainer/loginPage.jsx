@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../scss/containerStyles.scss'
 import { useAppDispatch } from '../../store/hooks.js'
-import LoginContainer from './loginContainer.jsx'
+import LoginContainer from './LoginContainer.jsx'
 function LoginPage() {
 
     const dispatch = useAppDispatch();
