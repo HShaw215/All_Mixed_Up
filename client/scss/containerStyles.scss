@@ -202,22 +202,38 @@ input {
 }
 
 .loginForm {
-    box-shadow: 1px 1px 1px black;
-    min-height: 1.75em;
+    width: 300px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #6b9b80;
+    text-align: center;
+    margin: auto;
 }
 
 #loginButton {
-    min-height: 4vh;
-    min-width: 6vw;
-    justify-content: center;
     margin: auto;
-    box-shadow: 1px 1px 1px black;
+    font-size: 16px;
+    width: 190px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: #29ba6a;
+    box-shadow: 1px 1px 1px 1px #1c7745;
 }
 
 #loginButton:hover {
-    background-color:#8ae9c8;
-    border-radius: 5px;
+    background-color: #46c57f;
+    box-shadow: 1px 1px 1px 1px #688b78;
+    transition-duration: 300ms;
 }
+
+#loginButton:active {
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+  }
 
 .signup {
     margin: auto;

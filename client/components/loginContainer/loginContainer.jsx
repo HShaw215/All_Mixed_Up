@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
 import { setUserID } from '../../store/appSlice';
 
@@ -22,7 +23,7 @@ function LoginContainer() {
         //     },
         //     body: JSON.stringify({username, password})
         // }).then(response => status = response)
-        // if (status) Navigate('/main')
+        // if (status) navigate('/main')
         // else alert('Invalid Username or Password')
 
         // console.log(username, password)
@@ -37,7 +38,11 @@ function LoginContainer() {
             <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
            <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
-           <a class='signup' href='/signup'>Sign Up</a>
+           <div className="createAccount">
+            <Nav.Link as={Link} to="/createAccount">
+                Create an account
+            </Nav.Link>
+            </div>
         </div>
     );
 }
