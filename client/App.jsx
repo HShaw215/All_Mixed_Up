@@ -6,10 +6,12 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => (
     <Routes>
-        <Route path='/' element={<LoginContainer />} />
-        <Route path='/signup' element={<SignUpContainer />} />
-        <Route path='/main' element={<MainContainer />} />
+        {/* <Route path='/' element={<LoginContainer />} /> */}
+        {/* <Route path='/signup' element={<SignUpContainer />} /> */}
+        <Route path='/' element={<MainContainer />} />
     </Routes>
 );
+
+//reassign path of MainContainer to '/main' once login functionality is complete
 
 export default App;
