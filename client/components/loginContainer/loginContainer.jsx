@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
-import Nav from 'react-bootstrap/Nav';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
 import { setUserID } from '../../store/appSlice';
@@ -39,12 +38,8 @@ function LoginContainer() {
         <div className='box'>
             <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
-           <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
-           <div className="createAccount">
-            {/* <Nav.Link as={Link} to="/createAccount">
-                Create an account
-            </Nav.Link> */}
-            </div>
+            <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
+            <a className="createAccount">Create an account</a>
         </div>
     );
 }
