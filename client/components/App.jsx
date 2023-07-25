@@ -25,20 +25,20 @@ function App() {
     };
     
     return (
-        // <div className="primary">
-        //     <div className="entryBox">
-        //     <Entry />
-        //     </div>
-        //     <div className='setBox'>
-        //     <Set />
-        //     </div>
-        //     <div className='containerBox'>
-        //     <Container />
-        //     </div>
-        // </div>
-        <div className='loginBox'>
-            <LoginPage />
+        <div className="primary">
+            <div className="entryBox">
+            <Entry />
+            </div>
+            <div className='setBox'>
+            <Set />
+            </div>
+            <div className='containerBox'>
+            <Container />
+            </div>
         </div>
+        // <div className='loginBox'>
+        //     <LoginPage />
+        // </div>
     );
 }
 
