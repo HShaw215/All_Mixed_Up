@@ -39,7 +39,7 @@ function LoginContainer() {
             <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
             <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
             <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
-            <a className="createAccount">Create an account</a>
+            <a className="createAccount" href='/signup'>Create an account</a>
         </div>
     );
 }
