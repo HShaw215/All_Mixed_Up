@@ -25,7 +25,7 @@ function SignUpContainer() {
         //     },
         //     body: JSON.stringify({username, password})
         // }).then(response => status = response)
-        // if (status) Navigate('/main')
+        // if (status) navigate('/main')
         //else alert('Username already taken')
 
         // console.log(username, password)
