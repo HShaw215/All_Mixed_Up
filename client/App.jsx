@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 const App = () => (
     <Routes>
         <Route path='/' element={<LoginContainer />} />
-        <Route path='/' element={<SignUpContainer />} />
+        <Route path='/signup' element={<SignUpContainer />} />
         <Route path='/main' element={<MainContainer />} />
     </Routes>
 );
