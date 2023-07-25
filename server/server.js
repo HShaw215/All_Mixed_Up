@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const signupRoute = require('./routes/signupRoute');
+const loginRoute = require('./routes/loginRoute');
 const songRoute = require('./routes/songRoute');
 const timerRoute = require('./routes/timerRoute');
 
@@ -23,10 +25,10 @@ app.get('/', (req, res) => {
 }
 
 //route for creating a new user
-app.use('/api/signup')
+app.use('/api/signup', signupRoute)
 
 //route for verifying user and logging in
-app.use('/api/login')
+app.use('/api/login', loginRoute)
 
 //route for fetching, adding, and deleting songs
 app.use('/api/songs', songRoute)
