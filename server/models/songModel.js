@@ -17,7 +17,7 @@ userSchema.pre('save', function(next){
     })
 });
 
-const User = mongoose.model('user', userSchema)
+const User = mongoose.model('User', userSchema)
 
 const songSchema = new Schema({
     name : {type: String, required: true, unique: true},
