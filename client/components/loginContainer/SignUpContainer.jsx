@@ -36,12 +36,18 @@ function SignUpContainer() {
     };
     
     return (
-        <div className='box'>
-            <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
-            <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
-           <button type='submit' id='loginButton' onClick = {() => signupSubmit(username, password)} >Submit</button>
-           <Link className="createAccount" to='/' >Login</Link>
+        <div>
+            <nav className='navBar'>
+                <p>All Mixed Up</p>
+            </nav>
+            <div className='box'>
+                <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
+                <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
+                <button type='submit' id='loginButton' onClick = {() => signupSubmit(username, password)} >Submit</button>
+                <Link className="createAccount" to='/' >Login</Link>
+            </div>
         </div>
+        
     );
 }
 
