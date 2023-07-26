@@ -1,4 +1,4 @@
-const songSchema = require('../models/songModel');
+const { User } = require('../models/songModel');
 
 const loginController = {
 
@@ -6,7 +6,15 @@ const loginController = {
     async verifyInfo(req, res, next) {
         
         return next()
+    },
+
+
+    //declare method createUser that creates a new user in database 
+    async createUser(req, res, next) {
+       
+        return next()
     }
+    
 
 };
 
