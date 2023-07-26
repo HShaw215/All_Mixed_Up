@@ -247,4 +247,18 @@ input {
     color:#05361b
 }
 
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 8vh;
+    background-color: rgba(80, 255, 208, 0.92);
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 30vh;
+    font-size: 24px;
+}
+
 
