@@ -37,9 +37,9 @@ function SignUpContainer() {
     
     return (
         <div>
-            <nav className='navBar'>
+            <header className='navBar'>
                 <p>All Mixed Up</p>
-            </nav>
+            </header>
             <div className='box'>
                 <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
                 <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
