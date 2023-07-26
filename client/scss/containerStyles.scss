@@ -7,6 +7,8 @@ body {
 }
 
 #root {
+    display: flex;
+    justify-content: center;
     margin: auto;
     height: auto;
     width: auto;
@@ -182,7 +184,6 @@ input {
 
 .loginBox {
     display: flex;
-    // border: 5px solid black;
     align-items: center;
     border-radius: 5px;
     justify-content: center;
@@ -245,6 +246,19 @@ input {
     margin: auto;
     text-decoration: underline;
     color:#05361b
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 100vw;
+    height: 8vh;
+    background-color: rgba(80, 255, 208, 0.92);
+    margin-bottom:  30vh;
+    margin-top: -.8vh;
+    font-size: 24px;
 }
 
 
