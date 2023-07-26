@@ -7,7 +7,7 @@ const loginController = {
         console.log('verifyInfo controller running')
         const { username, password } = req.body;
         try{
-            const user = User.findOne( { username } );
+            const user = await User.findOne( { username } );
             if (!user){
                 res.locals.status = false;
                 return next();
@@ -34,7 +34,7 @@ const loginController = {
         console.log('createUser controller running')
         const { username, password } = req.body;
         try{
-            res.locals.user = User.create( { username, password } );
+            res.locals.user = await User.create( { username, password } );
             return next()
         }
        catch{
