@@ -18,7 +18,7 @@ function SignUpContainer() {
     const signupSubmit = async (username, password) => {
         console.log('sign up form submitting');
         // dispatch(setUserID(username));
-        // fetch('/api/signup', {
+        // fetch('/api/user/signup', {
         //     method: "POST",
         //     headers: {
         //         "Content-Type": "application/json"
