@@ -4,6 +4,7 @@ const setController = {
 
     //declare method createPlaylist that pulls random amount of sorted songs based on input timer value
     async createPlaylist(req, res, next) {
+      try{
         console.log('setController createPlaylist is running');
         const { timer } = req.body;
         //multiple input time by 9 to get rought estimate of minutes (average time is about 7 minutes)
@@ -16,6 +17,14 @@ const setController = {
         { $sort: { key: 1}},
       ]);
         return next()
+      }
+      catch {
+        return next({
+          log: `Error occured in createPlaylist controller: ${err}`,
+          status: 400,
+          message: { err: "An error occurred" },
+        });
+      }
     }
 
 };
