@@ -20,6 +20,7 @@ userSchema.pre('save', function(next){
 const User = mongoose.model('User', userSchema)
 
 const songSchema = new Schema({
+    username : {type: String, required: true},
     name : {type: String, required: true, unique: true},
     key: {type: String, required: true},
     length: {type: Number, required: true},
