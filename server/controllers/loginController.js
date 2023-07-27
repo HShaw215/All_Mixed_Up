@@ -23,7 +23,9 @@ const loginController = {
         }
         catch {
             return next({
-                err: {err : 'Invalid username or password'}
+                log: `Error occured in verifyInfo controller: ${err}`,
+                status: 400,
+                message: { err: "An error occurred" },
             });
         }
     },
@@ -37,10 +39,12 @@ const loginController = {
             res.locals.user = await User.create( { username, password } );
             return next()
         }
-       catch{
-        return next({
-            err: {err : 'Username already taken'}
-        });
+        catch{
+            return next({
+                log: `Error occured in createUser controller: ${err}`,
+                status: 400,
+                message: { err: "An error occurred" },
+            });
        }
     }
     
