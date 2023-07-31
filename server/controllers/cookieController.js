@@ -2,8 +2,17 @@
 const cookieController = {
 
     setCookie(req, res, next) {
-        res.cookie('secret', Math.floor(Math.random() * 100).toString());
-        return next();
+        try{
+            res.cookie('secret', Math.floor(Math.random() * 100).toString());
+            return next();
+        }
+        catch {
+            return next({
+                log: `Error occured in setSSIDCookie controller: ${err}`,
+                status: 400,
+                message: { err: "An error occurred" },
+            });
+        }
     },
 
     setSSIDCookie(req, res, next) {
