@@ -1,4 +1,5 @@
 const { User } = require('../models/songModel');
+const bcrypt = require('bcryptjs')
 
 const loginController = {
 
