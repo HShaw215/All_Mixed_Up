@@ -1,6 +1,7 @@
 
 const cookieController = {
 
+    //controller creates secret key cookie for verification
     setCookie(req, res, next) {
         try{
             res.cookie('secret', Math.floor(Math.random() * 100).toString());
@@ -15,6 +16,7 @@ const cookieController = {
         }
     },
 
+    //controller creates session cookie assigned to usersname for session authentication
     setSSIDCookie(req, res, next) {
         try{
             res.cookie('ssid', res.locals.user, { httpOnly: true });
