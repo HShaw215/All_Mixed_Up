@@ -5,7 +5,8 @@ const initialState = {
     setList: [],
     timer: 0,
     songName: 'none',
-    songKey: 'none'
+    songKey: 'none',
+    loggedIn = false;
 }
 
 const appSlice = createSlice({
@@ -27,6 +28,9 @@ const appSlice = createSlice({
         setSongKey: (state, action) => {
             state.songKey = action.payload;
         },
+        setLoggedIn: (state, action) => {
+            state.loggedIn = action.payload;
+        }
     },
 });
 
