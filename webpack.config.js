@@ -30,11 +30,14 @@ module.exports = {
         ]
     },
     devServer: {
+        host: 'localhost',
+        port: 8080,
+        hot: true,
         static: {
             publicPath: '/',
-            directory: path.join(__dirname)
+            directory: path.join(__dirname, 'dist')
         },
-        compress: true,
+        headers: { 'Access-Control-Allow-Origin': '*' },
         proxy: {
             '/api/**': {
             target: 'http://localhost:3000/',
