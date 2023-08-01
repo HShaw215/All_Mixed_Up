@@ -24,9 +24,11 @@ function LoginContainer() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({username, password})
-        }).then(response => status = response)
-        if (status) navigate('/main')
-        else alert('Invalid Username or Password')
+        }).then(response =>{
+            status = response;
+            if (status) navigate('/main')
+            else alert('Invalid Username or Password')
+        });
 
         // console.log(username, password)
         // console.log('userID:', userID)
