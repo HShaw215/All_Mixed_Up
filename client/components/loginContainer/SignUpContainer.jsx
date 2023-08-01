@@ -17,19 +17,19 @@ function SignUpContainer() {
 
     const signupSubmit = async (username, password) => {
         console.log('sign up form submitting');
-        // dispatch(setUserID(username));
-        // fetch('/api/user/signup', {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify({username, password})
-        // }).then(response => status = response)
-        // if (status) navigate('/main')
-        //else alert('Username already taken')
+        dispatch(setUserID(username));
+        fetch('/api/user/signup', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({username, password})
+        }).then(response => status = response)
+        if (status) navigate('/main')
+        else alert('Username already taken')
 
-        // console.log(username, password)
-        // console.log('userID:', userID)
+        console.log(username, password)
+        console.log('userID:', userID)
 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
