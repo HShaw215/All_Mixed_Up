@@ -39,7 +39,8 @@ export const {
     setSetList,
     setTimer,
     setSongName,
-    setSongKey
+    setSongKey,
+    setLoggedIn.
 } = appSlice.actions;
 
 export default appSlice.reducer;
