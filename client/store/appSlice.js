@@ -6,7 +6,7 @@ const initialState = {
     timer: 0,
     songName: 'none',
     songKey: 'none',
-    loggedIn = false;
+    loggedIn: false,
 }
 
 const appSlice = createSlice({
@@ -40,7 +40,7 @@ export const {
     setTimer,
     setSongName,
     setSongKey,
-    setLoggedIn.
+    setLoggedIn,
 } = appSlice.actions;
 
 export default appSlice.reducer;
