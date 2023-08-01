@@ -16,11 +16,7 @@ function LoginContainer() {
 
     const loginSubmit = async (username, password) => {
         console.log('login form submitting');
-        const usernames = (document.getElementById('username')).value;
-        const passwords = (document.getElementById('password')).value
         dispatch(setUserID(username));
-        console.log(userID)
-        console.log(usernames, passwords)
         try{
                 const response = await fetch('/api/user/login', {
                     method: "POST",
