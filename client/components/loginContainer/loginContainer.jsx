@@ -10,7 +10,7 @@ function LoginContainer() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const navigate = useNavigate();
+
     const dispatch = useAppDispatch();
     const userID = useAppSelector((state) => state.app.userID);
     let status = false;
@@ -26,8 +26,8 @@ function LoginContainer() {
             body: JSON.stringify({username, password})
         }).then(response =>{
             status = response;
-            if (status) navigate('/main')
-            else alert('Invalid Username or Password')
+            // if (status) navigate('/main')
+            // else alert('Invalid Username or Password')
         });
 
         // console.log(username, password)
@@ -45,7 +45,7 @@ function LoginContainer() {
             <div className='box'>
                 <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
                 <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
-                <button type='submit' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
+                <button type='button' id='loginButton' onClick = {() => loginSubmit(username, password)} >Submit</button>
                 <Link className="createAccount" to='/signup' >Create an account</Link>
             </div>
         </div>

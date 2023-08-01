@@ -24,14 +24,14 @@ app.get('/', (req, res) => {
 }
 
 //route for creating user, verifying user, and logging in
-app.use('/api/user/**', loginRoute)
+app.use('/api/user/', loginRoute)
 
 //route for fetching, adding, and deleting songs
-app.use('/api/songs', songRoute)
+app.use('/api/songs/', songRoute)
 
 
 //route for sending set time filter
-app.use('/api/timer', timerRoute)
+app.use('/api/timer/', timerRoute)
 
 
 //catch all route
