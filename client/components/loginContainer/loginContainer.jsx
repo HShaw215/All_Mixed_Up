@@ -13,7 +13,7 @@ function LoginContainer() {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const userID = useAppSelector((state) => state.app.userID);
-    const status = false;
+    let status = false;
 
     const loginSubmit = async (username, password) => {
         console.log('login form submitting');
