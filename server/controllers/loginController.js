@@ -39,6 +39,7 @@ const loginController = {
         const { username, password } = req.body;
         try{
             res.locals.user = await User.create( { username, password } );
+            res.locals.status = true
             return next()
         }
         catch{
