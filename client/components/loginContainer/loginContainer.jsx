@@ -6,13 +6,14 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
 import { setUserID, setLoggedIn } from '../../store/appSlice';
 
 function LoginContainer() {
-
+ 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const userID = useAppSelector((state) => state.app.userID);
+    const loggedIn = useAppSelector((state) => state.app.loggedIn)
 
     const loginSubmit = async (username, password) => {
         console.log('login form submitting');
@@ -21,11 +22,12 @@ function LoginContainer() {
                 const response = await fetch('/api/user/login', {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json",
+                        "Access-Control-Allow-Origin" : "*",
                     },
                     body: JSON.stringify({ username: username, password: password })
             });
-            if (response){
+            if (response === true){
                 dispatch(setLoggedIn(true));
                 navigate('/main')
             }
