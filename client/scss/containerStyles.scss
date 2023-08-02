@@ -224,12 +224,35 @@ input {
 }
 
 #loginButton:hover {
-    background-color: #46c57f;
+    background-color: #50ffd0eb;
     box-shadow: 1px 1px 1px 1px #688b78;
-    transition-duration: 300ms;
+    transition-duration: 400ms;
 }
 
 #loginButton:active {
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+  }
+
+  #signupButton {
+    margin: auto;
+    font-size: 16px;
+    width: 190px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #3cc49feb;
+    box-shadow: 1px 1px 1px 1px #2c9478eb;
+}
+
+#signupButton:hover {
+    background-color: #50ffd0eb;
+    box-shadow: 1px 1px 1px 1px #34b996eb;
+    transition-duration: 300ms;
+}
+
+#signupButton:active {
     top: 5px;
     left: 5px;
     box-shadow: none;
@@ -255,7 +278,7 @@ input {
     border: 1px solid black;
     width: 100vw;
     height: 8vh;
-    background-color: rgba(80, 255, 208, 0.92);
+    background-color: #50ffd0eb;
     margin-bottom:  30vh;
     margin-top: -.8vh;
     font-size: 24px;

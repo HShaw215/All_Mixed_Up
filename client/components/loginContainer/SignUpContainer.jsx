@@ -44,7 +44,7 @@ function SignUpContainer() {
             <div className='box'>
                 <input className='loginForm' id='username' placeholder='Username' onChange = {e => setUsername(e.target.value)}></input>
                 <input className='loginForm' id='password' type='password' placeholder='Password' onChange = {e => setPassword(e.target.value)}></input>
-                <button type='submit' id='loginButton' onClick = {() => signupSubmit(username, password)} >Submit</button>
+                <button type='submit' id='signupButton' onClick = {() => signupSubmit(username, password)} >Create Account</button>
                 <Link className="createAccount" to='/' >Login</Link>
             </div>
         </div>
