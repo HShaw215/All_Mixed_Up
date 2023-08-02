@@ -6,8 +6,8 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => (
     <Routes>
-        {/* <Route path='/' element={<LoginContainer />} /> */}
-        {/* <Route path='/signup' element={<SignUpContainer />} /> */}
+        <Route path='/login' element={<LoginContainer />} />
+        <Route path='/signup' element={<SignUpContainer />} />
         <Route path='/' element={<MainContainer />} />
     </Routes>
 );
