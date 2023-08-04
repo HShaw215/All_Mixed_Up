@@ -12,6 +12,4 @@ const App = () => (
     </Routes>
 );
 
-//reassign path of MainContainer to '/main' once login functionality is complete
-
 export default App;
