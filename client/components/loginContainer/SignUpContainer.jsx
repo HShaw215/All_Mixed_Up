@@ -26,11 +26,12 @@ function SignUpContainer() {
             },
             body: JSON.stringify({username, password})
         }).then(response => status = response)
-        // if (status) navigate('/main')
-        // else alert('Username already taken')
-
-        console.log(username, password)
-        console.log('userID:', userID)
+        
+        if (status === true){
+            dispatch(setLoggedIn(true));
+            navigate('/main')
+        }
+        else alert('Invalid Username or Password')
 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
