@@ -17,7 +17,6 @@ function SignUpContainer() {
 
     const signupSubmit = async (username, password) => {
         console.log('sign up form submitting');
-        dispatch(setUserID(username));
         await fetch('/api/user/signup', {
             method: "POST",
             headers: {
@@ -29,6 +28,7 @@ function SignUpContainer() {
         
         if (status === true){
             dispatch(setLoggedIn(true));
+            dispatch(setUserID(username));
             navigate('/main')
         }
         else alert('Invalid Username or Password')
