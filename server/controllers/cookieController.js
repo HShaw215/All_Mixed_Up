@@ -7,7 +7,7 @@ const cookieController = {
             res.cookie('secret', Math.floor(Math.random() * 100).toString());
             return next();
         }
-        catch {
+        catch(err) {
             return next({
                 log: `Error occured in setSSIDCookie controller: ${err}`,
                 status: 400,
@@ -22,7 +22,7 @@ const cookieController = {
             res.cookie('ssid', res.locals.user, { httpOnly: true });
             return next()
         }
-        catch {
+        catch(err) {
             return next({
                 log: `Error occured in setSSIDCookie controller: ${err}`,
                 status: 400,
