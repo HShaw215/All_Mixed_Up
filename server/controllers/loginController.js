@@ -38,7 +38,8 @@ const loginController = {
         console.log('createUser controller running')
         const { username, password } = req.body;
         try{
-            res.locals.user = await User.create( { username, password } );
+            await User.create( { username, password } );
+            res.locals.user = username;
             res.locals.status = true
             return next()
         }
