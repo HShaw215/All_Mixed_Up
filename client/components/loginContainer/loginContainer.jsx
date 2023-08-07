@@ -25,15 +25,18 @@ function LoginContainer() {
                     },
                     body: JSON.stringify({ username: username, password: password })
             });
-            if (response === true){
-                dispatch(setLoggedIn(true));
-                navigate('/main')
+            if (!response.ok){
+                throw new Error ('Invalid Username or Password')
             }
-            else alert('Invalid Username or Password')
+            else {
+                dispatch(setLoggedIn(true));
+                dispatch(setUserID(username));
+                navigate('/main');
+            }
         }
-        catch(err) {
+        catch(err){
             console.log('Error:', err)
-        }
+        };
        
             // if (status) navigate('/main')
             // else alert('Invalid Username or Password')
