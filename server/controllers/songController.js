@@ -6,6 +6,8 @@ const songController = {
     async getAllSongs(req, res, next) {
         console.log('getAllSongs controller is running');
         try {
+            let username = req.cookies.ssid;
+            console.log(username)
             res.locals.songs = await Song.find({ username });
             return next();
         }
@@ -23,7 +25,9 @@ const songController = {
         console.log('addSong controller is running');
         const { name, key, length } = req.body;
         try {
-            res.locals.song = await Song.create({username: res.locals.user, name: name, key: key, length: length})
+            let user = req.cookies.ssid;
+            console.log(user)
+            res.locals.song = await Song.create({username: user, name: name, key: key, length: length})
             return next();
         }
         catch(err) {
