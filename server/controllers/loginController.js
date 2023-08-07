@@ -18,7 +18,7 @@ const loginController = {
                     res.locals.status = false;
                 } else {
                     res.locals.status = true;
-                    res.locals.user = user.id;
+                    res.locals.user = username;
                     return next()
                 }
             }
