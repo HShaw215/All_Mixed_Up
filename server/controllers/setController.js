@@ -18,7 +18,7 @@ const setController = {
       ]);
         return next()
       }
-      catch {
+      catch(err) {
         return next({
           log: `Error occured in createPlaylist controller: ${err}`,
           status: 400,
