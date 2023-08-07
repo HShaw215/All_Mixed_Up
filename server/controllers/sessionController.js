@@ -2,6 +2,7 @@ const Session = require('../models//sessionModel');
 
 const sessionController = {
 
+    //controller checks if user has a session cookie ID already
     async isLoggedIn(req, res, next){
         console.log('isLoggedIn controller is running');
         console.log('req.cookies:', req.cookies);
@@ -22,6 +23,7 @@ const sessionController = {
         };
     },
 
+    //controller creates a session when user logs in
     async startSession(req, res, next){
         console.log('startSession controller is running');
         console.log('user:', res.locals.user);
