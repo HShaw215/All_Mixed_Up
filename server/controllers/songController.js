@@ -9,7 +9,7 @@ const songController = {
             res.locals.songs = await Song.find({ username });
             return next();
         }
-        catch {
+        catch(err) {
             return next({
                 log: `Error occured in getAllSongs controller: ${err}`,
                 status: 400,
@@ -26,7 +26,7 @@ const songController = {
             res.locals.song = await Song.create({username: res.locals.user, name: name, key: key, length: length})
             return next();
         }
-        catch {
+        catch(err) {
             return next({
                 log: `Error occured in addSong controller: ${err}`,
                 status: 400,
