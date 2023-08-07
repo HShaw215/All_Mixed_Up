@@ -23,7 +23,7 @@ const loginController = {
                 }
             }
         }
-        catch {
+        catch(err) {
             return next({
                 log: `Error occured in verifyInfo controller: ${err}`,
                 status: 400,
@@ -37,12 +37,13 @@ const loginController = {
     async createUser(req, res, next) {
         console.log('createUser controller running')
         const { username, password } = req.body;
+        // console.log(username, password)
         try{
             res.locals.user = await User.create( { username, password } );
             res.locals.status = true
             return next()
         }
-        catch{
+        catch(err){
             return next({
                 log: `Error occured in createUser controller: ${err}`,
                 status: 400,
