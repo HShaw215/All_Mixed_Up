@@ -37,7 +37,6 @@ const loginController = {
     async createUser(req, res, next) {
         console.log('createUser controller running')
         const { username, password } = req.body;
-        // console.log(username, password)
         try{
             res.locals.user = await User.create( { username, password } );
             res.locals.status = true
