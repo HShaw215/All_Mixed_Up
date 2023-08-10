@@ -12,8 +12,6 @@ function SignUpContainer() {
 
      const navigate = useNavigate();
     const dispatch = useAppDispatch();
-    const userID = useAppSelector((state) => state.app.userID);
-    let status = false;
 
     const signupSubmit = async (username, password) => {
         console.log('sign up form submitting');
