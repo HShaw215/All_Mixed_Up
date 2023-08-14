@@ -3,13 +3,15 @@ import Entry from './Entry.jsx';
 import Container from './Container.jsx';
 import Set from './Set.jsx'
 import '../scss/containerStyles.scss'
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../store/hooks.js'
-import { setSetList } from '../store/appSlice.js'
+import { setLoggedIn, setSetList } from '../store/appSlice.js'
 
 function MainContainer() {
 
     const dispatch = useAppDispatch();
     const setList = useAppSelector((state) => state.app.setList)
+    const navigate = useNavigate();
 
     //For adding login, will have to move this to when main page renders
     //only have pull all songs when set list is an empty array
@@ -22,18 +24,30 @@ function MainContainer() {
            .catch((err) => console.log(err))
         console.log(setList)
     };
+
+    const logout = async () => {
+        await fetch('/api/user/logout');
+        dispatch(setLoggedIn(false));
+        navigate('/')
+    }
     
     return (
         <div className="primary">
-            <div className="entryBox">
-            <Entry />
+            <nav>
+                <button onClick={() => logout()}>Logout</button>
+            </nav>
+            <div>
+                <div className="entryBox">
+                <Entry />
+                </div>
+                <div className='setBox'>
+                <Set />
+                </div>
+                <div className='containerBox'>
+                <Container />
+                </div>
             </div>
-            <div className='setBox'>
-            <Set />
-            </div>
-            <div className='containerBox'>
-            <Container />
-            </div>
+           
         </div>
     );
 }
