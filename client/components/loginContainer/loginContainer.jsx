@@ -24,13 +24,14 @@ function LoginContainer() {
                     },
                     body: JSON.stringify({ username: username, password: password })
             });
-            if (!response.ok){
-                throw new Error ('Invalid Username or Password')
-            }
-            else {
+            if (response.ok){
                 dispatch(setLoggedIn(true));
                 dispatch(setUserID(username));
                 navigate('/main');
+               
+            }
+            else {
+                alert ('Invalid Username or Password')
             }
         }
         catch(err){
