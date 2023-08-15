@@ -33,8 +33,8 @@ function MainContainer() {
     
     return (
         <div className="primary">
-            <nav>
-                <button onClick={() => logout()}>Logout</button>
+            <nav id='logout'>
+                <button id='logoutButton' onClick={() => logout()}>Logout</button>
             </nav>
             <div>
                 <div className="entryBox">

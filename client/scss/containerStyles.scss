@@ -41,6 +41,18 @@ input {
     margin-top: 2em;
 }
 
+#logout{
+    justify-content: end;
+    display: flex;
+    width: 110em;
+    margin-top: 1em;
+}
+
+#logoutButton {
+    height: 40px;
+    width: 80px;
+}
+
 #add {
     background-color: $addButton;
     border-radius: 3px;
