@@ -55,9 +55,9 @@ input {
 }
 
 #logoutButton:hover{
-    cursor: grab;
     background-color: darken($addButton, 15%);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 #add {
@@ -68,7 +68,7 @@ input {
 
 #add:hover{
     background-color: darken($addButton, 15%);
-    cursor: grab;
+    cursor: pointer;
 }
 
 #vibes {
@@ -80,7 +80,7 @@ input {
 
 #vibes:hover{
     background-color: darken($addButton, 20%);
-    cursor: grab;
+    cursor: pointer;
 }
 
 .names {
@@ -213,7 +213,7 @@ input {
 
 .delete:hover{
     background-color: red;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .loginBox {
