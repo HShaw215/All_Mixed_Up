@@ -51,6 +51,11 @@ input {
 #logoutButton {
     height: 40px;
     width: 80px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#logoutButton:hover{
+    cursor: grab
 }
 
 #add {
