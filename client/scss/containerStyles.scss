@@ -64,11 +64,21 @@ input {
     border-width: 1.5px;
 }
 
+#add:hover{
+    background-color: lighten($addButton, 10%);
+    cursor: grab;
+}
+
 #vibes {
     background-color: lighten($addButton, 5%);
     margin-left: .5em;
     border-radius: 3px;
     border-width: 1.5px;
+}
+
+#vibes:hover{
+    background-color: lighten($addButton, 20%);
+    cursor: grab;
 }
 
 .names {
