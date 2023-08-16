@@ -209,6 +209,11 @@ input {
     margin-bottom: 10px;
 }
 
+.delete:hover{
+    background-color: red;
+    cursor: grab;
+}
+
 .loginBox {
     display: flex;
     align-items: center;
