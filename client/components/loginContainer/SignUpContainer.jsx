@@ -24,7 +24,7 @@ function SignUpContainer() {
                 },
                 body: JSON.stringify({username, password})
             });
-            if (response.ok){
+            if (response.status === 201){
                 dispatch(setLoggedIn(true));
                 dispatch(setUserID(username));
                 navigate('/main');
