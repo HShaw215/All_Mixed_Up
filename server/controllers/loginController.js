@@ -13,7 +13,8 @@ const loginController = {
                 res.locals.status = false;
                 return next();
             } else {
-                const check = bcrypt.compare(password, user.password);
+                const check = await bcrypt.compare(password, user.password);
+                console.log('check:', check)
                 if (!check){
                     res.locals.status = false;
                 } else {
