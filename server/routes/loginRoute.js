@@ -7,8 +7,13 @@ const loginRoute = express.Router();
 
 //route will verify that login username matches stored password in database
 loginRoute.post('/login', loginController.verifyInfo, sessionController.startSession, cookieController.setSSIDCookie, cookieController.setCookie, (req, res) => {
-    console.log('user verified');
-    res.status(200).send(res.locals.status)
+    if (res.locals.status){
+        console.log('user verified');
+        res.status(200).send(res.locals.status)
+    } else {
+        console.log('user not verified');
+        res.status(201).send(res.locals.status)
+    }
 });
 
 //route will create user in database and log them in

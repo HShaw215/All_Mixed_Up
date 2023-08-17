@@ -24,7 +24,8 @@ function LoginContainer() {
                     },
                     body: JSON.stringify({ username: username, password: password })
             });
-            if (response.ok){
+            console.log(response)
+            if (response.status === 200){
                 dispatch(setLoggedIn(true));
                 dispatch(setUserID(username));
                 navigate('/main');
