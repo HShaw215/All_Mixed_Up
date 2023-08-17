@@ -12,7 +12,7 @@ loginRoute.post('/login', loginController.verifyInfo, sessionController.startSes
         res.status(200).send(res.locals.status)
     } else {
         console.log('user not verified');
-        res.status(201).send(res.locals.status)
+        res.status(401).send(res.locals.status)
     }
 });
 
