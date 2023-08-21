@@ -25,7 +25,7 @@ function Set() {
     }
     
     return (
-        <div>
+        <div id='setTimerBox'>
            <form>
             <label>How Long is Your Set?
                 <input id='setTimer' type="text" placeholder="2" onChange = {e => setTimer(e.target.value)}></input>

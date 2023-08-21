@@ -105,6 +105,12 @@ input {
     margin-bottom: 3em;
 }
 
+#setTimerBox {
+    justify-content: center;
+    align-items: center;
+    margin-left: 390px;
+}
+
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
 [class="1A"], [class="1B"] {
     background-color: rgb(5, 196, 148);
