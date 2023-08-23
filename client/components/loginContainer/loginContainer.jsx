@@ -37,9 +37,10 @@ function LoginContainer() {
         catch(err){
             console.log('Error:', err)
         };
+
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
         
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
         };
     
     return (

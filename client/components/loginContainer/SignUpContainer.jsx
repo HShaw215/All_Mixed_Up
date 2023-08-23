@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
 import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
+import { useAppDispatch } from '../../store/hooks.js'
 import { setUserID, setLoggedIn } from '../../store/appSlice';
 
 function SignUpContainer() {
@@ -37,25 +37,10 @@ function SignUpContainer() {
         catch(err){
             console.log('Error:', err)
         };
-       
-        //     if (response === true){
-        //         console.log(status)
-        //         dispatch(setLoggedIn(true));
-        //         dispatch(setUserID(username));
-        //         navigate('/main')
-        //     }
-        //     else alert('Invalid Username or Password')
-        // })
-        
-        // if (status === true){
-        //     dispatch(setLoggedIn(true));
-        //     dispatch(setUserID(username));
-        //     navigate('/main')
-        // }
-        // else alert('Invalid Username or Password')
 
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
+
     };
     
     return (
