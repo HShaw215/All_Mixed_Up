@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../scss/containerStyles.scss'
 import { useNavigate } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-import { useAppDispatch, useAppSelector } from '../../store/hooks.js'
+import { useAppDispatch } from '../../store/hooks.js'
 import { setUserID, setLoggedIn } from '../../store/appSlice';
 
 function LoginContainer() {
@@ -24,7 +24,6 @@ function LoginContainer() {
                     },
                     body: JSON.stringify({ username: username, password: password })
             });
-            console.log(response)
             if (response.status === 200){
                 dispatch(setLoggedIn(true));
                 dispatch(setUserID(username));
@@ -38,16 +37,10 @@ function LoginContainer() {
         catch(err){
             console.log('Error:', err)
         };
-       
-            // if (status) navigate('/main')
-            // else alert('Invalid Username or Password')
+        
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
         };
-
-        // console.log(username, password)
-        // console.log('userID:', userID)
-
     
     return (
         <div>
