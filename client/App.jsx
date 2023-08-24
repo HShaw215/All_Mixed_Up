@@ -7,21 +7,21 @@ import { useAppSelector } from './store/hooks.js';
 
 export default function App(){
     const loggedIn = useAppSelector((state) => state.app.loggedIn);
-    console.log(loggedIn)
-   return loggedIn ? (
-    <>
-        <Routes>
-        <Route path='/main' element={<MainContainer />} />
-        </Routes>
-    </>
-   ) : (
-    <>
-        <Routes>
-        <Route path='/' element={<LoginContainer />} />
-        <Route path='/signup' element={<SignUpContainer />} />
-        <Route path='/main' element={<MainContainer />} />
-        </Routes>
-    </>
-   );
+    
+    return loggedIn ? (
+        <>
+            <Routes>
+            <Route path='/main' element={<MainContainer />} />
+            </Routes>
+        </>
+    ) : (
+        <>
+            <Routes>
+            <Route path='/' element={<LoginContainer />} />
+            <Route path='/signup' element={<SignUpContainer />} />
+            <Route path='/main' element={<MainContainer />} />
+            </Routes>
+        </>
+    );
 };
 
