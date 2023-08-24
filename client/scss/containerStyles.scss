@@ -41,10 +41,34 @@ input {
     margin-top: 2em;
 }
 
+#logout{
+    justify-content: end;
+    display: flex;
+    width: 90em;
+    margin-top: 1em;
+}
+
+#logoutButton {
+    height: 40px;
+    width: 80px;
+    box-shadow: 1px 1px 1px black;
+}
+
+#logoutButton:hover{
+    background-color: darken($addButton, 15%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #add {
     background-color: $addButton;
     border-radius: 3px;
     border-width: 1.5px;
+}
+
+#add:hover{
+    background-color: darken($addButton, 15%);
+    cursor: pointer;
 }
 
 #vibes {
@@ -52,6 +76,11 @@ input {
     margin-left: .5em;
     border-radius: 3px;
     border-width: 1.5px;
+}
+
+#vibes:hover{
+    background-color: darken($addButton, 20%);
+    cursor: pointer;
 }
 
 .names {
@@ -70,107 +99,113 @@ input {
     border: 1px solid black;
     margin-top: 1.5em;
     display: flex;
-    min-width: 72.5em;
-    max-width: 72.5em;
+    min-width: 73.85em;
+    max-width: 73.85em;
     flex-wrap: wrap;
     text-align: center;
     margin-bottom: 3em;
+}
+
+#setTimerBox {
+    justify-content: center;
+    align-items: center;
+    margin-left: 390px;
 }
 
 // This section is tricky because we absolutely have to have the class names be numbers and css hates that
 [class="1A"], [class="1B"] {
     background-color: rgb(5, 196, 148);
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="2A"], [class="2B"] {
     background-color: lime;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="3A"], [class="3B"] {
     background-color: rgb(251, 255, 0);
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="4A"], [class="4B"] {
     background-color: orange;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="5A"], [class="5B"] {
     background-color: salmon;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="6A"], [class="6B"] {
     background-color: palevioletred;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="7A"], [class="7B"] {
     background-color: plum;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="8A"], [class="8B"] {
     background-color: violet;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="9A"], [class="9B"] {
     background-color: rgb(159, 4, 159);
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="10A"], [class="10B"] {
     background-color: blueviolet;
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="11A"], [class="11B"] {
     background-color: rgb(220, 220, 244);
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
 [class="12A"], [class="12B"] {
     background-color: rgb(6, 234, 234);
     border: 1px solid black;
-    min-width: 18em;
-    max-width: 18em;
+    min-width: 18.338em;
+    max-width: 18.338em;
     text-align: center;
 }
 
@@ -180,6 +215,11 @@ input {
     border-radius: 7px;
     background-color: white;
     margin-bottom: 10px;
+}
+
+.delete:hover{
+    background-color: red;
+    cursor: pointer;
 }
 
 .loginBox {

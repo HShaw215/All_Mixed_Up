@@ -7,6 +7,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -30,14 +31,18 @@ module.exports = {
         ]
     },
     devServer: {
+        host: 'localhost',
+        port: 8080,
+        hot: true,
+        historyApiFallback: true,
         static: {
             publicPath: '/',
-            directory: path.join(__dirname)
+            directory: path.join(__dirname, 'dist')
         },
-        compress: true,
+        headers: { 'Access-Control-Allow-Origin': '*' },
         proxy: {
             '/api/**': {
-            target: 'http://localhost:3003/',
+            target: 'http://localhost:3000/',
             secure: false,
         },
     },

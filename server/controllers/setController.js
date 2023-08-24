@@ -1,21 +1,30 @@
-const songSchema = require('../models/songModel');
+const { Song } = require('../models/songModel')
 
 const setController = {
 
     //declare method createPlaylist that pulls random amount of sorted songs based on input timer value
     async createPlaylist(req, res, next) {
+      try{
         console.log('setController createPlaylist is running');
         const { timer } = req.body;
         //multiple input time by 9 to get rought estimate of minutes (average time is about 7 minutes)
         const newTimer = timer * 9;
         //invoke aggregate function on database and assign evaluated result to res.locals.playlist
-        res.locals.playlist = await songSchema.aggregate([
+        res.locals.playlist = await Song.aggregate([
         //pull random amount of songs equal to size of newTimer
         { $sample: { size: newTimer } },
         //sort in ascending order of key
         { $sort: { key: 1}},
       ]);
         return next()
+      }
+      catch(err) {
+        return next({
+          log: `Error occured in createPlaylist controller: ${err}`,
+          status: 400,
+          message: { err: "An error occurred" },
+        });
+      }
     }
 
 };

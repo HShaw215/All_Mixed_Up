@@ -1,14 +1,19 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors')
+const cookieParser = require('cookie-parser')
 
+const loginRoute = require('./routes/loginRoute');
 const songRoute = require('./routes/songRoute');
 const timerRoute = require('./routes/timerRoute');
 
-const PORT = 3003;
+const PORT = 3000;
 
 const app = express();
 
 app.use(express.json());
+app.use(cors())
+app.use(cookieParser());
 
 app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
@@ -22,12 +27,15 @@ app.get('/', (req, res) => {
     })
 }
 
+//route for creating user, verifying user, and logging in
+app.use('/api/user/', loginRoute)
+
 //route for fetching, adding, and deleting songs
-app.use('/api/songs', songRoute)
+app.use('/api/songs/', songRoute)
 
 
 //route for sending set time filter
-app.use('/api/timer', timerRoute)
+app.use('/api/timer/', timerRoute)
 
 
 //catch all route
