@@ -14,7 +14,8 @@ All Mixed Up is a DJ Setlist creator that randomly generates playlists for perfo
 
 ## About
 
-Currently All Mixed Up is a personal project, so the database is composed of preselected songs. Login functionality to store individual users with their own song database is under development and will be implemented soon.
+All Mixed Up now has login and signup functionality to store songs unique to each user! Store all of your ID's in the database and have them ready to go for any
+set.
 
 ## Installation
 
