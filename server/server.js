@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(cors())
 app.use(cookieParser());
 
-app.use('/build', express.static(path.resolve(__dirname, '../build')))
+// app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
 if (process.env.NODE_ENV === 'production'){
-    app.use('/', express.static(path.join(__dirname, '../build')))
+    app.use('/', express.static(path.join(__dirname, '../build/index.html')))
 }
 else {
 //route to serve the index html when the page is loaded
