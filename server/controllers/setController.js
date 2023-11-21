@@ -7,7 +7,7 @@ const setController = {
       try{
         console.log('setController createPlaylist is running');
         const { timer } = req.body;
-        //multiple input time by 9 to get rought estimate of minutes (average time is about 7 minutes)
+        //multiple input time by 9 to get rough estimate of minutes (average time is about 7 minutes)
         const newTimer = timer * 9;
         //invoke aggregate function on database and assign evaluated result to res.locals.playlist
         res.locals.playlist = await Song.aggregate([

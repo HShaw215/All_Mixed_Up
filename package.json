@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.jsx",
+    "homepage": "https://hshaw215.github.io/All_Mixed_Up/",
     "scripts": {
         "start": "node server/server.js",
         "build": "NODE_ENV=production webpack",
-        "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open\" \"nodemon ./server/server.js\""
+        "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --open\" \"nodemon ./server/server.js\"",
+        "deploy": "gh-pages -d build"
     },
     "nodemonConfig": {
         "ignore": [
@@ -47,6 +49,7 @@
         "babel-loader": "^9.1.2",
         "concurrently": "^6.0.2",
         "css-loader": "^6.7.3",
+        "gh-pages": "^6.0.0",
         "html-loader": "^4.2.0",
         "webpack": "^5.82.0",
         "webpack-cli": "^4.8.0",

@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/build', express.static(path.resolve(__dirname, '../build')))
+// app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
 if (process.env.NODE_ENV === 'production'){
     app.use('/', express.static(path.join(__dirname, '../build')))
