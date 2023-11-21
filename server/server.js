@@ -16,7 +16,7 @@ app.use(cookieParser());
 // app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
 if (process.env.NODE_ENV === 'production'){
-    app.use('/', express.static(path.join(__dirname, '../build/index.html')))
+    app.use('/', express.static(path.join(__dirname, '../build')))
 }
 else {
 //route to serve the index html when the page is loaded
