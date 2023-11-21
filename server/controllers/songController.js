@@ -8,6 +8,7 @@ const songController = {
         try {
             let username = req.cookies.ssid;
             console.log(username)
+            //pulls only songs tagged with current username
             res.locals.songs = await Song.find({ username });
             return next();
         }
@@ -27,6 +28,7 @@ const songController = {
         try {
             let user = req.cookies.ssid;
             console.log(user)
+            //adding user as a created field of the song schema allows the songs to be seperated by user in the database
             res.locals.song = await Song.create({username: user, name: name, key: key, length: length})
             return next();
         }
