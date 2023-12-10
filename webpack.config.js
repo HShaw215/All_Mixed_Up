@@ -36,7 +36,7 @@ module.exports = {
         historyApiFallback: true,
         static: {
             publicPath: '/',
-            directory: path.join(__dirname, '/dist')
+            directory: path.join(__dirname, '/build')
         },
         headers: { 'Access-Control-Allow-Origin': '*' },
         proxy: {
