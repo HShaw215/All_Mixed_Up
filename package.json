@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.jsx",
-    "homepage": "https:hshaw215.github.io/All_Mixed_Up/",
+    "homepage": "https://hshaw215.github.io/All_Mixed_Up/",
     "scripts": {
         "start": "node server/server.js",
         "build": "NODE_ENV=production webpack",
