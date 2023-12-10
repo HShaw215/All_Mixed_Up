@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 
 const loginRoute = require('./routes/loginRoute');
@@ -12,6 +13,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(bodyParser.json())
 
 // app.use('/build', express.static(path.resolve(__dirname, '../build')))
 
