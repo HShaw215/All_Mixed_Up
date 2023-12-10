@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: '/client/index.jsx',
     output: {
-        path: path.resolve(__dirname, '../build'),
-        publicPath: '/',
+        path: path.resolve(__dirname, './build'),
+        publicPath: './',
         filename: 'bundle.js',
     },
     module: {
@@ -36,7 +36,7 @@ module.exports = {
         historyApiFallback: true,
         static: {
             publicPath: '/',
-            directory: path.join(__dirname, '/build')
+            directory: path.join(__dirname, 'build')
         },
         headers: { 'Access-Control-Allow-Origin': '*' },
         proxy: {
@@ -48,7 +48,7 @@ module.exports = {
 },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './index.html'),
+            template: path.resolve(__dirname, 'index.html'),
         }),
     ],
     resolve: {
